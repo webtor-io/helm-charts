@@ -1,0 +1,36 @@
+replicaCount: 2
+
+image:
+  repository: webtor/torrent-http-proxy
+  tag: latest
+  pullPolicy: IfNotPresent
+
+nameOverride: ""
+fullnameOverride: ""
+
+secret: ""
+jobNodeAffinity:
+  key: ""
+  value: ""
+
+rbac:
+  create: true
+
+service:
+  type: ClusterIP
+  port: 80
+
+ingress:
+  enabled: false
+  annotations: {}
+  paths: []
+  hosts: []
+  tls: []
+
+resources: {}
+
+nodeSelector: {}
+
+tolerations: []
+
+affinity: {}

@@ -10,4 +10,34 @@ entries:
     urls:
     - https://github.com/webtor-io/helm-charts/releases/download/content-prober-0.1.0/content-prober-0.1.0.tgz
     version: 0.1.0
+  magnet2torrent:
+  - apiVersion: v1
+    appVersion: "1.0"
+    created: "2019-12-17T02:31:24.495108+03:00"
+    description: A Magnet2Torrent Chart
+    digest: e813ff19166392c4299859353e6cb4c5ac8c7c005729923618343e940e9aa4ea
+    name: magnet2torrent
+    urls:
+    - https://github.com/webtor-io/helm-charts/releases/download/magnet2torrent-0.1.0/magnet2torrent-0.1.0.tgz
+    version: 0.1.0
+  torrent-http-proxy:
+  - apiVersion: v1
+    appVersion: "1.0"
+    created: "2019-12-17T02:41:34.528076+03:00"
+    description: A Torrent HTTP Proxy Chart
+    digest: 81b209c705c15b954048b2d0195658dd81f860b30786af1a4811494bee77efc0
+    name: torrent-http-proxy
+    urls:
+    - https://github.com/webtor-io/helm-charts/releases/download/torrent-http-proxy-0.1.0/torrent-http-proxy-0.1.0.tgz
+    version: 0.1.0
+  torrent-store:
+  - apiVersion: v1
+    appVersion: "1.0"
+    created: "2019-12-17T02:41:34.824116+03:00"
+    description: A Torrent Store Chart
+    digest: 5d08c9f61a41d03a2960f673ded3a33fb878da07492624574209123f2dcd894a
+    name: torrent-store
+    urls:
+    - https://github.com/webtor-io/helm-charts/releases/download/torrent-store-0.1.0/torrent-store-0.1.0.tgz
+    version: 0.1.0
 generated: "2019-12-17T01:07:48.69474+03:00"
