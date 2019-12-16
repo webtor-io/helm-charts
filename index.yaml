@@ -1,0 +1,13 @@
+apiVersion: v1
+entries:
+  content-prober:
+  - apiVersion: v1
+    appVersion: "1.0"
+    created: "2019-12-17T01:07:49.244938+03:00"
+    description: A Content Prober Chart
+    digest: 5be5edd0c5c5484e1686555000cca886b1d91fa9dd9ffcb1e8916f28f64fbe89
+    name: content-prober
+    urls:
+    - https://github.com/webtor-io/helm-charts/releases/download/content-prober-0.1.0/content-prober-0.1.0.tgz
+    version: 0.1.0
+generated: "2019-12-17T01:07:48.69474+03:00"
