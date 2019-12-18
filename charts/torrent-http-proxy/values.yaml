@@ -1,5 +1,3 @@
-replicaCount: 2
-
 image:
   repository: webtor/torrent-http-proxy
   tag: latest
