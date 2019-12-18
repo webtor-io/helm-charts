@@ -18,7 +18,7 @@ Let's start:
 5. Clone this repository:
 
     ```
-    git@github.com:webtor-io/helm-charts.git
+    git clone git@github.com:webtor-io/helm-charts.git
     ```
 
 6. Run Helmfile there:
