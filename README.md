@@ -12,6 +12,8 @@ Let's start:
    minikube   Ready    master   23h   v1.17.0
    ```
    
+   (Tested with VirtualBox (Windows/Linux) and HyperKit (Mac) drivers)
+   
 2. [Install Helm and init it](https://helm.sh/docs/intro/install/) and check it:
 
    ```
