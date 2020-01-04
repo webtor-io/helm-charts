@@ -18,7 +18,7 @@ Let's start:
 5. Clone this repository:
 
     ```
-    git@github.com:webtor-io/helm-charts.git
+    git clone https://github.com/webtor-io/helm-charts.git
     ```
 
 6. Run Helmfile there:
@@ -38,6 +38,7 @@ Let's start:
    redis-master-0                   1/1     Running   0          35s
    torrent-http-proxy-mwktl         1/1     Running   0          37s
    torrent-store-65c6bd4659-jjfqf   1/1     Running   0          34s
+   ...
    ```
 
 8. Get api url at last!
@@ -48,3 +49,10 @@ Let's start:
    ```
 
 That's all!
+
+For update do next two things:
+
+    ```
+    git pull
+    helmfile apply
+    ```

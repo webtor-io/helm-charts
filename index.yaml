@@ -20,6 +20,16 @@ entries:
     urls:
     - https://github.com/webtor-io/helm-charts/releases/download/magnet2torrent-0.1.0/magnet2torrent-0.1.0.tgz
     version: 0.1.0
+  srt2vtt:
+  - apiVersion: v1
+    appVersion: "1.0"
+    created: "2020-01-04T15:46:09.477622+03:00"
+    description: SRT2VTT Chart
+    digest: 799a1080a68da6ca71c4e72fffc4bdb81625ff58743477a6c1ab0c5b1afffda7
+    name: srt2vtt
+    urls:
+    - https://github.com/webtor-io/helm-charts/releases/download/srt2vtt-0.1.0/srt2vtt-0.1.0.tgz
+    version: 0.1.0
   torrent-http-proxy:
   - apiVersion: v1
     appVersion: "1.0"

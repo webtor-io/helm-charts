@@ -30,3 +30,7 @@ releases:
   namespace: webtor
   chart: webtor/torrent-store
   version: 0.1.0
+- name: srt2vtt
+  namespace: webtor
+  chart: webtor/srt2vtt
+  version: 0.1.0
