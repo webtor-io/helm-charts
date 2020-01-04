@@ -11,6 +11,18 @@ jobNodeAffinity:
   key: ""
   value: ""
 
+seeder:
+  image: webtor/torrent-web-seeder:latest
+  cpu:
+    requests: ""
+    limits: ""
+
+transcoder:
+  image: webtor/content-transcoder:latest
+  cpu:
+    requests: ""
+    limits: ""
+
 rbac:
   create: true
 

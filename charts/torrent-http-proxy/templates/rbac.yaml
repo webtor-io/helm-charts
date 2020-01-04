@@ -3,11 +3,11 @@ kind: ClusterRole
 apiVersion: rbac.authorization.k8s.io/v1
 metadata:
   labels:
-    app: {{ template "torrent-http-proxy-chart.name" . }}
+    app: {{ template "torrent-http-proxy.name" . }}
     chart: {{ .Chart.Name }}-{{ .Chart.Version }}
     heritage: {{ .Release.Service }}
     release: {{ .Release.Name }}
-  name: {{ template "torrent-http-proxy-chart.fullname" . }}
+  name: {{ template "torrent-http-proxy.fullname" . }}
 rules:
 - apiGroups: [""]
   resources: ["pods"]
@@ -20,15 +20,15 @@ apiVersion: rbac.authorization.k8s.io/v1beta1
 kind: ClusterRoleBinding
 metadata:
   labels:
-    app: {{ template "torrent-http-proxy-chart.name" . }}
+    app: {{ template "torrent-http-proxy.name" . }}
     chart: {{ .Chart.Name }}-{{ .Chart.Version }}
     heritage: {{ .Release.Service }}
     release: {{ .Release.Name }}
-  name: {{ template "torrent-http-proxy-chart.fullname" . }}
+  name: {{ template "torrent-http-proxy.fullname" . }}
 roleRef:
   apiGroup: rbac.authorization.k8s.io
   kind: ClusterRole
-  name: {{ template "torrent-http-proxy-chart.fullname" . }}
+  name: {{ template "torrent-http-proxy.fullname" . }}
 subjects:
   - kind: ServiceAccount
     name: default

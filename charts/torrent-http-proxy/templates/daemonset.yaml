@@ -1,21 +1,21 @@
 apiVersion: apps/v1
 kind: DaemonSet
 metadata:
-  name: {{ include "torrent-http-proxy-chart.fullname" . }}
+  name: {{ include "torrent-http-proxy.fullname" . }}
   labels:
-    app.kubernetes.io/name: {{ include "torrent-http-proxy-chart.name" . }}
-    helm.sh/chart: {{ include "torrent-http-proxy-chart.chart" . }}
+    app.kubernetes.io/name: {{ include "torrent-http-proxy.name" . }}
+    helm.sh/chart: {{ include "torrent-http-proxy.chart" . }}
     app.kubernetes.io/instance: {{ .Release.Name }}
     app.kubernetes.io/managed-by: {{ .Release.Service }}
 spec:
   selector:
     matchLabels:
-      app.kubernetes.io/name: {{ include "torrent-http-proxy-chart.name" . }}
+      app.kubernetes.io/name: {{ include "torrent-http-proxy.name" . }}
       app.kubernetes.io/instance: {{ .Release.Name }}
   template:
     metadata:
       labels:
-        app.kubernetes.io/name: {{ include "torrent-http-proxy-chart.name" . }}
+        app.kubernetes.io/name: {{ include "torrent-http-proxy.name" . }}
         app.kubernetes.io/instance: {{ .Release.Name }}
     spec:
       containers:
@@ -29,6 +29,18 @@ spec:
               value: "{{ .Values.jobNodeAffinity.key }}"
             - name: JOB_NODE_AFFINITY_VALUE
               value: "{{ .Values.jobNodeAffinity.value }}"
+            - name: SEEDER_IMAGE
+              value: "{{ .Values.seeder.image }}"
+            - name: SEEDER_CPU_REQUESTS
+              value: "{{ .Values.seeder.cpu.requests }}"
+            - name: SEEDER_CPU_LIMITS
+              value: "{{ .Values.seeder.cpu.limits }}"
+            - name: TRANSCODER_IMAGE
+              value: "{{ .Values.transcoder.image }}"
+            - name: TRANSCODER_CPU_REQUESTS
+              value: "{{ .Values.transcoder.cpu.requests }}"
+            - name: TRANSCODER_CPU_LIMITS
+              value: "{{ .Values.transcoder.cpu.limits }}"
           ports:
             - name: http
               containerPort: 8080
