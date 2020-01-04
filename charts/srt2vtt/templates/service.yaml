@@ -1,0 +1,16 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: {{ include "srt2vtt.fullname" . }}
+  labels:
+{{ include "srt2vtt.labels" . | indent 4 }}
+spec:
+  type: {{ .Values.service.type }}
+  ports:
+    - port: {{ .Values.service.port }}
+      targetPort: http
+      protocol: TCP
+      name: http
+  selector:
+    app.kubernetes.io/name: {{ include "srt2vtt.name" . }}
+    app.kubernetes.io/instance: {{ .Release.Name }}

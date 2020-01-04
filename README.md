@@ -85,8 +85,8 @@ That's all!
 
 For update do next three things:
 
-    ```
-    git pull
-    helm repo update
-    helmfile apply
-    ```
+ ```
+ git pull
+ helm repo update
+ helmfile apply
+ ```
