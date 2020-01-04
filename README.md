@@ -4,24 +4,47 @@ This guide will show you how to install all essential components of webtor backe
 
 Let's start:
 
-1. [Install Minikube](https://kubernetes.io/docs/tasks/tools/install-minikube/)
-2. [Install Helm and init it](https://helm.sh/docs/intro/install/)
-3. [Install Helmfile](https://github.com/roboll/helmfile#installation)
+1. [Install Minikube](https://kubernetes.io/docs/tasks/tools/install-minikube/) and check it:
 
-4. Add Webtor charts repository with:
+   ```
+   % kubectl get no
+   NAME       STATUS   ROLES    AGE   VERSION
+   minikube   Ready    master   23h   v1.17.0
+   ```
+   
+   (Tested with VirtualBox (Windows/Linux) and HyperKit (Mac) drivers)
+   
+2. [Install Helm and init it](https://helm.sh/docs/intro/install/) and check it:
+
+   ```
+   % helm version
+   Client: &version.Version{SemVer:"v2.15.1", GitCommit:"cf1de4f8ba70eded310918a8af3a96bfe8e7683b", GitTreeState:"clean"}
+   Server: &version.Version{SemVer:"v2.15.1", GitCommit:"cf1de4f8ba70eded310918a8af3a96bfe8e7683b", GitTreeState:"clean"}
+   ```
+
+3. [Install Helmfile](https://github.com/roboll/helmfile#installation) and check it:
+
+   ```
+   % helmfile -v
+   helmfile version v0.90.2
+   ```
+
+4. [Install helm-diff](https://github.com/databus23/helm-diff#install)
+
+5. Add Webtor charts repository with:
 
    ```
    helm repo add webtor https://charts.webtor.io
 
    ```
 
-5. Clone this repository:
+6. Clone this repository:
 
     ```
     git clone https://github.com/webtor-io/helm-charts.git
     ```
 
-6. Run Helmfile there:
+7. Run Helmfile there:
 
     ```
     helmfile apply
@@ -47,12 +70,23 @@ Let's start:
    % minikube service torrent-http-proxy --url -n webtor
    http://192.168.64.3:30749
    ```
+   
+   and check it:
+   
+   ```
+   % curl -I http://192.168.64.3:30749
+   HTTP/1.1 500 Internal Server Error
+   Date: Thu, 19 Dec 2019 19:44:43 GMT
+   ```
+   
+   it will return "Internal Server Error" for direct calls.
 
 That's all!
 
-For update do next two things:
+For update do next three things:
 
     ```
     git pull
+    helm repo update
     helmfile apply
     ```
