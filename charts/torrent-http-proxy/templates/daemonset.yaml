@@ -41,6 +41,10 @@ spec:
               value: "{{ .Values.transcoder.cpu.requests }}"
             - name: TRANSCODER_CPU_LIMITS
               value: "{{ .Values.transcoder.cpu.limits }}"
+            - name: WEB_ORIGIN_HOST_REDIRECT_FLAG
+              value: "{{ .Values.redirect.enabled }}"
+            - name: WEB_ORIGIN_HOST_REDIRECT_PREFIX_FLAG
+              value: "{{ .Values.redirect.prefix }}"
           ports:
             - name: http
               containerPort: 8080

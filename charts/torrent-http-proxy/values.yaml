@@ -11,6 +11,10 @@ jobNodeAffinity:
   key: ""
   value: ""
 
+redirect:
+  enabled: ""
+  prefix: "abra--"
+
 seeder:
   image: webtor/torrent-web-seeder:latest
   cpu:
