@@ -20,6 +20,16 @@ entries:
     urls:
     - https://github.com/webtor-io/helm-charts/releases/download/magnet2torrent-0.1.0/magnet2torrent-0.1.0.tgz
     version: 0.1.0
+  node-dns-syncer:
+  - apiVersion: v1
+    appVersion: "1.0"
+    created: "2020-01-12T18:50:51.440634+03:00"
+    description: A Helm chart for Node DNS Syncer
+    digest: a99d4da82976e3a2d2d87af18a01e3f7a94a234f854ba986a98bffd484a06849
+    name: node-dns-syncer
+    urls:
+    - https://github.com/webtor-io/helm-charts/releases/download/node-dns-syncer-0.1.0/node-dns-syncer-0.1.0.tgz
+    version: 0.1.0
   srt2vtt:
   - apiVersion: v1
     appVersion: "1.0"

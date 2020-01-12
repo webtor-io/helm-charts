@@ -1,0 +1,40 @@
+apiVersion: batch/v1beta1
+kind: CronJob
+metadata:
+  name: "{{ include "node-dns-syncer.fullname" . }}"
+  labels:
+    app.kubernetes.io/name: {{ include "node-dns-syncer.name" . }}
+    helm.sh/chart: {{ include "node-dns-syncer.chart" . }}
+    app.kubernetes.io/instance: {{ .Release.Name }}
+    app.kubernetes.io/managed-by: {{ .Release.Service }}
+spec:
+  schedule: "{{ .Values.schedule }}"
+  concurrencyPolicy: Forbid
+  startingDeadlineSeconds: 10
+  jobTemplate:
+    spec:
+      template:
+        spec:
+          containers:
+          - name: "{{ .Chart.Name }}"
+            image: "{{ .Values.image.repository }}:{{ .Values.image.tag }}"
+            imagePullPolicy: {{ .Values.image.pullPolicy }}
+            env:
+              - name: CF_API_EMAIL
+                value: "{{ .Values.cloudflare.email }}"
+              - name: CF_API_KEY
+                value: "{{ .Values.cloudflare.apiKey }}"
+              - name: CF_ZONES
+                value: "{{ .Values.cloudflare.zones }}"
+              - name: K8S_LABEL_SELECTOR
+                value: "{{ .Values.nodes.labelSelector }}"
+              - name: DOMAIN_NAME_PREFIX
+                value: "{{ .Values.domainName.prefix }}"
+              - name: DOMAIN_NAME_SUFFIX
+                value: "{{ .Values.domainName.suffix }}"
+          restartPolicy: Never
+        {{- with .Values.affinity }}
+          affinity:
+            {{- toYaml . | nindent 12 }}
+        {{- end }}
+      backoffLimit: 0

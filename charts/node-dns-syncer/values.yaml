@@ -1,0 +1,31 @@
+image:
+  repository: webtor/node-dns-syncer
+  tag: latest
+  pullPolicy: IfNotPresent
+
+nameOverride: ""
+fullnameOverride: ""
+schedule: "*/5 * * * *"
+
+resources: {}
+
+nodeSelector: {}
+
+tolerations: []
+
+affinity: {}
+
+rbac:
+  create: true
+
+cloudflare:
+  apiKey: ""
+  email: ""
+  zones: ""
+
+domainName:
+  prefix: "abra--"
+  suffix: "."
+
+nodes:
+  labelSelector: ""
