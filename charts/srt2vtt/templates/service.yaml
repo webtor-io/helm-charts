@@ -11,6 +11,13 @@ spec:
       targetPort: http
       protocol: TCP
       name: http
+
+{{- if .Values.service.topologyKeys }}
+  topologyKeys:
+  {{- range .Values.service.topologyKeys }}
+    - {{ . | quote }}
+  {{- end }}
+{{- end }}
   selector:
     app.kubernetes.io/name: {{ include "srt2vtt.name" . }}
     app.kubernetes.io/instance: {{ .Release.Name }}
