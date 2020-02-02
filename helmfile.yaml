@@ -18,6 +18,10 @@ releases:
   namespace: webtor
   chart: webtor/magnet2torrent
   version: 0.1.0
+- name: external-proxy
+  namespace: webtor
+  chart: webtor/external-proxy
+  version: 0.1.0
 - name: torrent-http-proxy
   namespace: webtor
   chart: webtor/torrent-http-proxy

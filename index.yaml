@@ -10,6 +10,16 @@ entries:
     urls:
     - https://github.com/webtor-io/helm-charts/releases/download/content-prober-0.1.0/content-prober-0.1.0.tgz
     version: 0.1.0
+  external-proxy:
+  - apiVersion: v1
+    appVersion: "1.0"
+    created: "2020-02-02T22:00:14.814273+03:00"
+    description: An External Proxy Chart
+    digest: 9fa8f60e1aac7bcc04b5e1261de36cf3d98c4c6df74f9a9803c0cde5fcc1eab0
+    name: external-proxy
+    urls:
+    - https://github.com/webtor-io/helm-charts/releases/download/external-proxy-0.1.0/external-proxy-0.1.0.tgz
+    version: 0.1.0
   magnet2torrent:
   - apiVersion: v1
     appVersion: "1.0"
