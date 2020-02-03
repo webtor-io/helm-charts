@@ -22,14 +22,13 @@ releases:
   namespace: webtor
   chart: webtor/external-proxy
   version: 0.1.0
-- name: torrent-http-proxy
+- name: video-info
   namespace: webtor
-  chart: webtor/torrent-http-proxy
+  chart: webtor/video-info
   version: 0.1.0
-  values:
-    - service:
-        type: NodePort
-        port: 8080
+- name: torrent-archiver
+  namespace: webtor
+  chart: webtor/torrent-archiver
 - name: torrent-store
   namespace: webtor
   chart: webtor/torrent-store
@@ -38,3 +37,11 @@ releases:
   namespace: webtor
   chart: webtor/srt2vtt
   version: 0.1.0
+- name: torrent-http-proxy
+  namespace: webtor
+  chart: webtor/torrent-http-proxy
+  version: 0.1.0
+  values:
+    - service:
+        type: NodePort
+        port: 8080

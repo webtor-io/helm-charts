@@ -50,6 +50,16 @@ entries:
     urls:
     - https://github.com/webtor-io/helm-charts/releases/download/srt2vtt-0.1.0/srt2vtt-0.1.0.tgz
     version: 0.1.0
+  torrent-archiver:
+  - apiVersion: v1
+    appVersion: "1.0"
+    created: "2020-02-03T22:59:05.413484+03:00"
+    description: Torrent Archiver Chart
+    digest: 639eefd1c22721f375ab3e59cf732e7b114f5544f7bdf785c137b0fbdd8d8174
+    name: torrent-archiver
+    urls:
+    - https://github.com/webtor-io/helm-charts/releases/download/torrent-archiver-0.1.0/torrent-archiver-0.1.0.tgz
+    version: 0.1.0
   torrent-http-proxy:
   - apiVersion: v1
     appVersion: "1.0"
@@ -69,5 +79,15 @@ entries:
     name: torrent-store
     urls:
     - https://github.com/webtor-io/helm-charts/releases/download/torrent-store-0.1.0/torrent-store-0.1.0.tgz
+    version: 0.1.0
+  video-info:
+  - apiVersion: v1
+    appVersion: "1.0"
+    created: "2020-02-03T22:59:06.132864+03:00"
+    description: Video Info Chart
+    digest: 728854b8f3573f72b5c8b50c5de87eee339428c58a14aa6a32a05333e594f076
+    name: video-info
+    urls:
+    - https://github.com/webtor-io/helm-charts/releases/download/video-info-0.1.0/video-info-0.1.0.tgz
     version: 0.1.0
 generated: "2019-12-17T01:07:48.69474+03:00"
