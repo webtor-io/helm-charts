@@ -27,6 +27,8 @@ transcoder:
     requests: ""
     limits: ""
 
+clients: {}
+
 rbac:
   create: true
 

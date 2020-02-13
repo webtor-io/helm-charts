@@ -14,17 +14,24 @@ spec:
       app.kubernetes.io/instance: {{ .Release.Name }}
   template:
     metadata:
+      annotations:
+        checksum/config: {{ include (print $.Template.BasePath "/configmap.yaml") . | sha256sum }}
       labels:
         app.kubernetes.io/name: {{ include "torrent-http-proxy.name" . }}
         app.kubernetes.io/instance: {{ .Release.Name }}
     spec:
+      volumes:
+        - name: config-volume
+          configMap:
+            name: {{ include "torrent-http-proxy.fullname" . }}
       containers:
         - name: {{ .Chart.Name }}
           image: "{{ .Values.image.repository }}:{{ .Values.image.tag }}"
           imagePullPolicy: {{ .Values.image.pullPolicy }}
+          volumeMounts:
+            - name: config-volume
+              mountPath: /etc/config
           env:
-            - name: SECRET
-              value: "{{ .Values.secret }}"
             - name: JOB_NODE_AFFINITY_KEY
               value: "{{ .Values.jobNodeAffinity.key }}"
             - name: JOB_NODE_AFFINITY_VALUE
