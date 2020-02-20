@@ -59,6 +59,9 @@ spec:
             - name: httpprobe
               containerPort: 8081
               protocol: TCP
+            - name: grpc
+              containerPort: 50051
+              protocol: TCP
           livenessProbe:
             httpGet:
               path: /liveness

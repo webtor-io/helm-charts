@@ -34,7 +34,9 @@ rbac:
 
 service:
   type: ClusterIP
-  port: 80
+  ports: 
+    http: 80
+    grpc: 50051
   topologyKeys: []
 
 ingress:
