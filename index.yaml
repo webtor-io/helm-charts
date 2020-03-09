@@ -30,6 +30,16 @@ entries:
     urls:
     - https://github.com/webtor-io/helm-charts/releases/download/external-proxy-0.1.0/external-proxy-0.1.0.tgz
     version: 0.1.0
+  job-cleaner:
+  - apiVersion: v1
+    appVersion: "1.0"
+    created: "2020-03-10T00:55:35.787365+03:00"
+    description: A Helm chart for Job Cleaner
+    digest: bb5e3e35dc3d56f10bb4b3e5858a179ae5d4a683981a5370133dc038b03899ef
+    name: job-cleaner
+    urls:
+    - https://github.com/webtor-io/helm-charts/releases/download/job-cleaner-0.1.0/job-cleaner-0.1.0.tgz
+    version: 0.1.0
   magnet2torrent:
   - apiVersion: v1
     appVersion: "1.0"
