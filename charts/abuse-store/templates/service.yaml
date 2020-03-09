@@ -1,0 +1,19 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: {{ include "abuse-store.fullname" . }}
+  labels:
+    app.kubernetes.io/name: {{ include "abuse-store.name" . }}
+    helm.sh/chart: {{ include "abuse-store.chart" . }}
+    app.kubernetes.io/instance: {{ .Release.Name }}
+    app.kubernetes.io/managed-by: {{ .Release.Service }}
+spec:
+  type: ClusterIP
+  ports:
+    - port: 50051
+      targetPort: grpc
+      protocol: TCP
+      name: grpc
+  selector:
+    app.kubernetes.io/name: {{ include "abuse-store.name" . }}
+    app.kubernetes.io/instance: {{ .Release.Name }}
