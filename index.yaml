@@ -120,4 +120,24 @@ entries:
     urls:
     - https://github.com/webtor-io/helm-charts/releases/download/video-info-0.1.0/video-info-0.1.0.tgz
     version: 0.1.0
+  webtor-web-blog:
+  - apiVersion: v1
+    appVersion: "1.0"
+    created: "2020-03-10T01:52:22.511021+03:00"
+    description: Webtor Web Blog Chart
+    digest: e050c2bc89c82ae4706d047936fdf4af1da8a468f4561e6f5256c56b454bbab0
+    name: webtor-web-blog
+    urls:
+    - https://github.com/webtor-io/helm-charts/releases/download/webtor-web-blog-0.1.0/webtor-web-blog-0.1.0.tgz
+    version: 0.1.0
+  webtor-web-ui:
+  - apiVersion: v1
+    appVersion: "1.0"
+    created: "2020-03-10T01:52:22.725935+03:00"
+    description: Webtor Web UI Chart
+    digest: c896e1511186f67852ee9c6e84978848f9ad2b024b7abe001cb673b39c568b67
+    name: webtor-web-ui
+    urls:
+    - https://github.com/webtor-io/helm-charts/releases/download/webtor-web-ui-0.1.0/webtor-web-ui-0.1.0.tgz
+    version: 0.1.0
 generated: "2019-12-17T01:07:48.69474+03:00"

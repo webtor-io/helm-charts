@@ -1,0 +1,18 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: "{{ include "webtor-web-blog.fullname" . }}-test-connection"
+  labels:
+    app.kubernetes.io/name: {{ include "webtor-web-blog.name" . }}
+    helm.sh/chart: {{ include "webtor-web-blog.chart" . }}
+    app.kubernetes.io/instance: {{ .Release.Name }}
+    app.kubernetes.io/managed-by: {{ .Release.Service }}
+  annotations:
+    "helm.sh/hook": test-success
+spec:
+  containers:
+    - name: wget
+      image: busybox
+      command: ['wget']
+      args:  ['{{ include "webtor-web-blog.fullname" . }}:{{ .Values.service.port }}']
+  restartPolicy: Never

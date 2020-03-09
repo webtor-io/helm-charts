@@ -1,0 +1,30 @@
+replicaCount: 1
+
+image:
+  repository: webtor/webtor-web-ui
+  tag: latest
+  pullPolicy: IfNotPresent
+
+nameOverride: ""
+fullnameOverride: ""
+secret: ""
+domain: ""
+
+service:
+  type: ClusterIP
+  port: 80
+
+ingress:
+  enabled: true
+  annotations: {}
+  paths: ['/']
+  hosts: []
+  tls: []
+
+resources: {}
+
+nodeSelector: {}
+
+tolerations: []
+
+affinity: {}
