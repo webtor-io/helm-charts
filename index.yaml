@@ -1,5 +1,15 @@
 apiVersion: v1
 entries:
+  balancer-excluder:
+  - apiVersion: v1
+    appVersion: "1.0"
+    created: "2020-03-09T21:39:43.208987+03:00"
+    description: A Helm chart for Balancer Excluder
+    digest: 944ee7ce5bd300b07faaf63cc25f9c8f82b2a1883b6151173a51f080e3274a3a
+    name: balancer-excluder
+    urls:
+    - https://github.com/webtor-io/helm-charts/releases/download/balancer-excluder-0.1.0/balancer-excluder-0.1.0.tgz
+    version: 0.1.0
   content-prober:
   - apiVersion: v1
     appVersion: "1.0"

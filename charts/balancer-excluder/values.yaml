@@ -1,0 +1,25 @@
+# Default values for balancer-excluder.
+# This is a YAML-formatted file.
+# Declare variables to be passed into your templates.
+
+replicaCount: 1
+
+image:
+  repository: webtor/balancer-excluder
+  tag: latest
+  pullPolicy: IfNotPresent
+
+nameOverride: ""
+fullnameOverride: ""
+schedule: "*/5 * * * *"
+
+rbac:
+  create: true
+
+resources: {}
+
+nodeSelector: {}
+
+tolerations: []
+
+affinity: {}
