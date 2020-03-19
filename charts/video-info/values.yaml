@@ -1,5 +1,3 @@
-replicaCount: 1
-
 image:
   repository: webtor/video-info
   tag: latest
