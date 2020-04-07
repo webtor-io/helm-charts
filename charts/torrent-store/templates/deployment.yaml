@@ -23,11 +23,6 @@ spec:
         - name: {{ .Chart.Name }}
           image: "{{ .Values.image.repository }}:{{ .Values.image.tag }}"
           imagePullPolicy: {{ .Values.image.pullPolicy }}
-          env:
-            - name: OSDB_USER
-              value: "{{ .Values.osdb.user }}"
-            - name: OSDB_PASS
-              value: "{{ .Values.osdb.pass }}"
           ports:
             - name: grpc
               containerPort: 50051
