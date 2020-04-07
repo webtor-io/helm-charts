@@ -113,6 +113,15 @@ entries:
   video-info:
   - apiVersion: v1
     appVersion: "1.0"
+    created: "2020-04-08T00:38:10.348818+03:00"
+    description: Video Info Chart
+    digest: ebe625def21445ca48c1738511b6e53eb60f565760752266fc9cb1e915d06ce5
+    name: video-info
+    urls:
+    - https://github.com/webtor-io/helm-charts/releases/download/video-info-0.1.1/video-info-0.1.1.tgz
+    version: 0.1.1
+  - apiVersion: v1
+    appVersion: "1.0"
     created: "2020-02-03T22:59:06.132864+03:00"
     description: Video Info Chart
     digest: 728854b8f3573f72b5c8b50c5de87eee339428c58a14aa6a32a05333e594f076
