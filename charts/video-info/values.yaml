@@ -1,3 +1,5 @@
+replicaCount: 1
+
 image:
   repository: webtor/video-info
   tag: latest
@@ -9,6 +11,10 @@ fullnameOverride: ""
 service:
   type: ClusterIP
   port: 80
+
+osdb:
+  user: ""
+  pass: ""
 
 resources: {}
 
