@@ -42,16 +42,30 @@ spec:
               value: "{{ .Values.seeder.cpu.requests }}"
             - name: SEEDER_CPU_LIMITS
               value: "{{ .Values.seeder.cpu.limits }}"
+            - name: SEEDER_GRACE
+              value: "{{ .Values.seeder.grace }}"
             - name: TRANSCODER_IMAGE
               value: "{{ .Values.transcoder.image }}"
             - name: TRANSCODER_CPU_REQUESTS
               value: "{{ .Values.transcoder.cpu.requests }}"
             - name: TRANSCODER_CPU_LIMITS
               value: "{{ .Values.transcoder.cpu.limits }}"
+            - name: TRANSCODER_GRACE
+              value: "{{ .Values.transcoder.grace }}"
             - name: WEB_ORIGIN_HOST_REDIRECT_FLAG
               value: "{{ .Values.redirect.enabled }}"
             - name: WEB_ORIGIN_HOST_REDIRECT_PREFIX_FLAG
               value: "{{ .Values.redirect.prefix }}"
+            - name: USE_SNAPSHOT
+              value: "{{ .Values.snapshot.enabled }}"
+            - name: RESTIC_PASSWORD
+              value: "{{ .Values.snapshot.restic.password }}"
+            - name: RESTIC_REPOSITORY
+              value: "{{ .Values.snapshot.restic.repository }}"
+            - name: AWS_ACCESS_KEY_ID
+              value: "{{ .Values.snapshot.aws.accessKeyId }}"
+            - name: AWS_SECRET_ACCESS_KEY
+              value: "{{ .Values.snapshot.aws.secretAccessKey }}"
           ports:
             - name: http
               containerPort: 8080

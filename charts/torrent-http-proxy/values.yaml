@@ -17,15 +17,26 @@ redirect:
 
 seeder:
   image: webtor/torrent-web-seeder:latest
+  grace: 600
   cpu:
     requests: ""
     limits: ""
 
 transcoder:
   image: webtor/content-transcoder:latest
+  grace: 600
   cpu:
     requests: ""
     limits: ""
+
+snapshot:
+  enabled: false
+  restic:
+    password: ""
+    repository: ""
+  aws:
+    accessKeyId: ""
+    secretAccessKey: ""
 
 clients: {}
 
