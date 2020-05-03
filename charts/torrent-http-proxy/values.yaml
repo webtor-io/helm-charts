@@ -36,6 +36,7 @@ snapshot:
     secretAccessKey: ""
     bucket: ""
     endpoint: ""
+    region: ""
 
 clients: {}
 

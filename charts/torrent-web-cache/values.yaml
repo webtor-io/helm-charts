@@ -11,6 +11,7 @@ aws:
   secretAccessKey: ""
   bucket: ""
   endpoint: ""
+  region: ""
 
 service:
   type: ClusterIP
