@@ -140,6 +140,15 @@ entries:
   torrent-web-cache:
   - apiVersion: v1
     appVersion: "1.0"
+    created: "2020-05-03T18:13:16.667845+03:00"
+    description: Caching proxy for torrent content with S3-backend
+    digest: 5a5f0a6eb0f08e7a515e4e87b038710e42b23700e5ba87b57f0c198616fffc45
+    name: torrent-web-cache
+    urls:
+    - https://github.com/webtor-io/helm-charts/releases/download/torrent-web-cache-0.1.3/torrent-web-cache-0.1.3.tgz
+    version: 0.1.3
+  - apiVersion: v1
+    appVersion: "1.0"
     created: "2020-05-03T16:00:37.884444+03:00"
     description: Caching proxy for torrent content with S3-backend
     digest: 6ef99e2350207cedc4ced960c9cdb94229426466beedd4bd73283dda6f2fdc13
