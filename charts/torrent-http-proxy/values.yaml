@@ -31,12 +31,11 @@ transcoder:
 
 snapshot:
   enabled: false
-  restic:
-    password: ""
-    repository: ""
   aws:
     accessKeyId: ""
     secretAccessKey: ""
+    bucket: ""
+    endpoint: ""
 
 clients: {}
 

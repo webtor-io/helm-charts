@@ -93,6 +93,15 @@ entries:
   torrent-http-proxy:
   - apiVersion: v1
     appVersion: "1.0"
+    created: "2020-05-03T15:22:18.7315+03:00"
+    description: A Torrent HTTP Proxy Chart
+    digest: b8f519b3d0356bb09acf00fc94ecc1f9d6e75bc850d723751b03ae6cfb9128ce
+    name: torrent-http-proxy
+    urls:
+    - https://github.com/webtor-io/helm-charts/releases/download/torrent-http-proxy-0.1.2/torrent-http-proxy-0.1.2.tgz
+    version: 0.1.2
+  - apiVersion: v1
+    appVersion: "1.0"
     created: "2020-04-16T01:53:03.559265+03:00"
     description: A Torrent HTTP Proxy Chart
     digest: b57750b209b6507cc371a7037023825d2b2b2a9d37953b0811a62128057259c3
@@ -118,6 +127,16 @@ entries:
     name: torrent-store
     urls:
     - https://github.com/webtor-io/helm-charts/releases/download/torrent-store-0.1.0/torrent-store-0.1.0.tgz
+    version: 0.1.0
+  torrent-web-cache:
+  - apiVersion: v1
+    appVersion: "1.0"
+    created: "2020-05-03T15:22:19.175327+03:00"
+    description: Caching proxy for torrent content with S3-backend
+    digest: 0663bfb5b31d962c2bfa9c39219e3e6ce967045b5863196d8320d9f4a4cea50c
+    name: torrent-web-cache
+    urls:
+    - https://github.com/webtor-io/helm-charts/releases/download/torrent-web-cache-0.1.0/torrent-web-cache-0.1.0.tgz
     version: 0.1.0
   video-info:
   - apiVersion: v1

@@ -1,0 +1,26 @@
+image:
+  repository: webtor/torrent-web-cache
+  tag: latest
+  pullPolicy: IfNotPresent
+
+nameOverride: ""
+fullnameOverride: ""
+
+aws:
+  accessKeyId: ""
+  secretAccessKey: ""
+  bucket: ""
+  endpoint: ""
+
+service:
+  type: ClusterIP
+  port: 80
+  topologyKeys: []
+
+resources: {}
+
+nodeSelector: {}
+
+tolerations: []
+
+affinity: {}

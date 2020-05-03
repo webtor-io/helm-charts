@@ -58,14 +58,14 @@ spec:
               value: "{{ .Values.redirect.prefix }}"
             - name: USE_SNAPSHOT
               value: "{{ .Values.snapshot.enabled }}"
-            - name: RESTIC_PASSWORD
-              value: "{{ .Values.snapshot.restic.password }}"
-            - name: RESTIC_REPOSITORY
-              value: "{{ .Values.snapshot.restic.repository }}"
             - name: AWS_ACCESS_KEY_ID
               value: "{{ .Values.snapshot.aws.accessKeyId }}"
             - name: AWS_SECRET_ACCESS_KEY
               value: "{{ .Values.snapshot.aws.secretAccessKey }}"
+            - name: AWS_BUCKET
+              value: "{{ .Values.snapshot.aws.bucket }}"
+            - name: AWS_ENDPOINT
+              value: "{{ .Values.snapshot.aws.endpoint }}"
           ports:
             - name: http
               containerPort: 8080
