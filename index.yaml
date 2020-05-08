@@ -90,6 +90,16 @@ entries:
     urls:
     - https://github.com/webtor-io/helm-charts/releases/download/torrent-archiver-0.1.0/torrent-archiver-0.1.0.tgz
     version: 0.1.0
+  torrent-cache-cleaner:
+  - apiVersion: v1
+    appVersion: "1.0"
+    created: "2020-05-08T20:16:34.419554+03:00"
+    description: A Helm chart for Torrent Cache Cleaner
+    digest: 6cb8455cafef6ffde8a216d7300fcd1accd179890d8aa3968b09e687fc63f812
+    name: torrent-cache-cleaner
+    urls:
+    - https://github.com/webtor-io/helm-charts/releases/download/torrent-cache-cleaner-0.1.0/torrent-cache-cleaner-0.1.0.tgz
+    version: 0.1.0
   torrent-http-proxy:
   - apiVersion: v1
     appVersion: "1.0"

@@ -1,0 +1,23 @@
+image:
+  repository: webtor/torrent-cache-cleaner
+  tag: latest
+  pullPolicy: IfNotPresent
+
+nameOverride: ""
+fullnameOverride: ""
+schedule: "*/5 * * * *"
+
+resources: {}
+
+nodeSelector: {}
+
+tolerations: []
+
+affinity: {}
+
+aws:
+  accessKeyId: ""
+  secretAccessKey: ""
+  bucket: ""
+  endpoint: ""
+  region: ""

@@ -1,0 +1,38 @@
+apiVersion: batch/v1beta1
+kind: CronJob
+metadata:
+  name: "{{ include "torrent-cache-cleaner.fullname" . }}"
+  labels:
+    app.kubernetes.io/name: {{ include "torrent-cache-cleaner.name" . }}
+    helm.sh/chart: {{ include "torrent-cache-cleaner.chart" . }}
+    app.kubernetes.io/instance: {{ .Release.Name }}
+    app.kubernetes.io/managed-by: {{ .Release.Service }}
+spec:
+  schedule: "{{ .Values.schedule }}"
+  concurrencyPolicy: Forbid
+  startingDeadlineSeconds: 10
+  jobTemplate:
+    spec:
+      template:
+        spec:
+          containers:
+          - name: "{{ .Chart.Name }}"
+            image: "{{ .Values.image.repository }}:{{ .Values.image.tag }}"
+            imagePullPolicy: {{ .Values.image.pullPolicy }}
+            env:
+              - name: AWS_ACCESS_KEY_ID
+                value: "{{ .Values.aws.accessKeyId }}"
+              - name: AWS_SECRET_ACCESS_KEY
+                value: "{{ .Values.aws.secretAccessKey }}"
+              - name: AWS_BUCKET
+                value: "{{ .Values.aws.bucket }}"
+              - name: AWS_ENDPOINT
+                value: "{{ .Values.aws.endpoint }}"
+              - name: AWS_REGION
+                value: "{{ .Values.aws.region }}"
+          restartPolicy: Never
+        {{- with .Values.affinity }}
+          affinity:
+            {{- toYaml . | nindent 12 }}
+        {{- end }}
+      backoffLimit: 0
