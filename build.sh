@@ -1,6 +1,6 @@
 OWNER=webtor-io
 REPO=helm-charts
-rm -rf .deploy/*
+# rm -rf .deploy/*
 mkdir -p .deploy/index
 for D in `ls charts`; do
     V=`grep version charts/$D/Chart.yaml | cut -d' ' -f2 | tr -d '\n'`
