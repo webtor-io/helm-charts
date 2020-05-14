@@ -16,6 +16,14 @@ osdb:
   user: ""
   pass: ""
 
+aws:
+  enabled: ""
+  accessKeyId: ""
+  secretAccessKey: ""
+  bucket: ""
+  endpoint: ""
+  region: ""
+
 resources: {}
 
 nodeSelector: {}

@@ -28,6 +28,18 @@ spec:
               value: "{{ .Values.osdb.user }}"
             - name: OSDB_PASS
               value: "{{ .Values.osdb.pass }}"
+            - name: AWS_ACCESS_KEY_ID
+              value: "{{ .Values.aws.accessKeyId }}"
+            - name: AWS_SECRET_ACCESS_KEY
+              value: "{{ .Values.aws.secretAccessKey }}"
+            - name: AWS_BUCKET
+              value: "{{ .Values.aws.bucket }}"
+            - name: AWS_ENDPOINT
+              value: "{{ .Values.aws.endpoint }}"
+            - name: AWS_REGION
+              value: "{{ .Values.aws.region }}"
+            - name: USE_S3
+              value: "{{ .Values.aws.enabled }}"
           ports:
             - name: http
               containerPort: 8080
