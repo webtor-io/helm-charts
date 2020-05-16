@@ -232,4 +232,14 @@ entries:
     urls:
     - https://github.com/webtor-io/helm-charts/releases/download/webtor-web-ui-0.1.0/webtor-web-ui-0.1.0.tgz
     version: 0.1.0
+  webtorrent-tracker:
+  - apiVersion: v1
+    appVersion: "1.0"
+    created: "2020-05-17T00:23:05.393688+03:00"
+    description: WebTorrent Tracker Chart
+    digest: 3240286b3c582bcb4e7d450811c7d26d4003dbb15baa16ea4cdf90697af9da63
+    name: webtorrent-tracker
+    urls:
+    - https://github.com/webtor-io/helm-charts/releases/download/webtorrent-tracker-0.1.0/webtorrent-tracker-0.1.0.tgz
+    version: 0.1.0
 generated: "2019-12-17T01:07:48.69474+03:00"
