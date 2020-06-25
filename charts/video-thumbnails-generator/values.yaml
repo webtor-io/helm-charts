@@ -1,0 +1,33 @@
+replicaCount: 1
+
+image:
+  repository: webtor/video-thumbnails-generator
+  tag: latest
+  pullPolicy: IfNotPresent
+
+nameOverride: ""
+fullnameOverride: ""
+
+service:
+  type: ClusterIP
+  port: 80
+
+osdb:
+  user: ""
+  pass: ""
+
+aws:
+  enabled: ""
+  accessKeyId: ""
+  secretAccessKey: ""
+  bucket: ""
+  endpoint: ""
+  region: ""
+
+resources: {}
+
+nodeSelector: {}
+
+tolerations: []
+
+affinity: {}
