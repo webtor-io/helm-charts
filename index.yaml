@@ -215,6 +215,15 @@ entries:
   video-thumbnails-generator:
   - apiVersion: v1
     appVersion: "1.0"
+    created: "2020-06-26T01:04:56.992495+03:00"
+    description: Video Thumbnails Generator Chart
+    digest: 7485d477527dd6a537490fbc3cba02bb31d4bf2548a4a4505fb069c3c41768ee
+    name: video-thumbnails-generator
+    urls:
+    - https://github.com/webtor-io/helm-charts/releases/download/video-thumbnails-generator-0.1.1/video-thumbnails-generator-0.1.1.tgz
+    version: 0.1.1
+  - apiVersion: v1
+    appVersion: "1.0"
     created: "2020-06-26T00:54:19.427888+03:00"
     description: Video Thumbnails Generator Chart
     digest: ec45ab3b299bb5a0cf95cf60264d35272dc4ad91a629492ba67109edb0b52539
