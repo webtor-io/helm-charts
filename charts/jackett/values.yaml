@@ -1,0 +1,42 @@
+replicaCount: 1
+
+image:
+  repository: linuxserver/jackett
+  tag: latest
+  pullPolicy: IfNotPresent
+
+nameOverride: ""
+fullnameOverride: ""
+
+jackett:
+  puid: 1000
+  pgid: 1000
+  tz: Europe/London
+  autoUpdate: true
+  runOpts: run
+
+service:
+  type: ClusterIP
+  port: 80
+  topologyKeys: []
+
+persistence:
+  enabled: true
+  accessMode: ReadWriteOnce
+  size: 1Gi
+  annotations: {}
+
+ingress:
+  enabled: false
+  annotations: {}
+  paths: []
+  hosts: []
+  tls: []
+
+resources: {}
+
+nodeSelector: {}
+
+tolerations: []
+
+affinity: {}

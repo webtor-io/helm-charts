@@ -40,6 +40,16 @@ entries:
     urls:
     - https://github.com/webtor-io/helm-charts/releases/download/external-proxy-0.1.0/external-proxy-0.1.0.tgz
     version: 0.1.0
+  jackett:
+  - apiVersion: v1
+    appVersion: "1.0"
+    created: "2020-06-27T16:33:06.511202+03:00"
+    description: Jackett Chart
+    digest: 7700a67105be6c78b371f0f0ff07e0d204e005897392026b35430639b29edfe3
+    name: jackett
+    urls:
+    - https://github.com/webtor-io/helm-charts/releases/download/jackett-0.1.0/jackett-0.1.0.tgz
+    version: 0.1.0
   job-cleaner:
   - apiVersion: v1
     appVersion: "1.0"
@@ -252,6 +262,15 @@ entries:
     - https://github.com/webtor-io/helm-charts/releases/download/webtor-web-ui-0.1.0/webtor-web-ui-0.1.0.tgz
     version: 0.1.0
   webtorrent-tracker:
+  - apiVersion: v1
+    appVersion: "1.0"
+    created: "2020-06-27T16:33:10.234096+03:00"
+    description: WebTorrent Tracker Chart
+    digest: 911484971f2e3b7faf73b29cf0b7772a304b10be0f2e4a073489f89176573ce5
+    name: webtorrent-tracker
+    urls:
+    - https://github.com/webtor-io/helm-charts/releases/download/webtorrent-tracker-0.1.1/webtorrent-tracker-0.1.1.tgz
+    version: 0.1.1
   - apiVersion: v1
     appVersion: "1.0"
     created: "2020-05-17T00:23:05.393688+03:00"

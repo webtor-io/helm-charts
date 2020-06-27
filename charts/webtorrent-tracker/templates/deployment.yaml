@@ -33,7 +33,7 @@ spec:
           livenessProbe:
             httpGet:
               path: /stats
-              port: httpp
+              port: http
           readinessProbe:
             httpGet:
               path: /stats

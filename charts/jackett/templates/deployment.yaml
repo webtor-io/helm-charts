@@ -1,0 +1,78 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: {{ include "jackett.fullname" . }}
+  labels:
+{{ include "jackett.labels" . | indent 4 }}
+spec:
+  replicas: {{ .Values.replicaCount }}
+  selector:
+    matchLabels:
+      app.kubernetes.io/name: {{ include "jackett.name" . }}
+      app.kubernetes.io/instance: {{ .Release.Name }}
+  template:
+    metadata:
+      labels:
+        app.kubernetes.io/name: {{ include "jackett.name" . }}
+        app.kubernetes.io/instance: {{ .Release.Name }}
+    spec:
+    {{- with .Values.imagePullSecrets }}
+      imagePullSecrets:
+        {{- toYaml . | nindent 8 }}
+    {{- end }}
+      containers:
+        - name: {{ .Chart.Name }}
+          securityContext:
+            {{- toYaml .Values.securityContext | nindent 12 }}
+          image: "{{ .Values.image.repository }}:{{ .Values.image.tag }}"
+          imagePullPolicy: {{ .Values.image.pullPolicy }}
+          ports:
+            - name: http
+              containerPort: 9117
+              protocol: TCP
+          # livenessProbe:
+          #   tcpSocket:
+          #     port: http
+          # readinessProbe:
+          #   tcpSocket:
+          #     port: http
+          resources:
+            {{- toYaml .Values.resources | nindent 12 }}
+          env:
+          - name: PUID
+            value: {{ .Values.jackett.puid | quote }}
+          - name: PGID
+            value: {{ .Values.jackett.pgid | quote }}
+          - name: TZ
+            value: {{ .Values.jackett.tz | quote }}
+          - name: AUTO_UPDATE
+            value: {{ .Values.jackett.autoUpdate | quote }}
+          - name: RUN_OPTS
+            value: {{ .Values.jackett.runOpts | quote }}
+          volumeMounts:
+          - name: config
+            mountPath: /config
+          - name: downloads
+            mountPath: /downloads
+      {{- with .Values.nodeSelector }}
+      nodeSelector:
+        {{- toYaml . | nindent 8 }}
+      {{- end }}
+    {{- with .Values.affinity }}
+      affinity:
+        {{- toYaml . | nindent 8 }}
+    {{- end }}
+    {{- with .Values.tolerations }}
+      tolerations:
+        {{- toYaml . | nindent 8 }}
+    {{- end }}
+      volumes:
+      - name: downloads
+        emptyDir: {}
+      - name: config
+      {{- if .Values.persistence.enabled }}
+        persistentVolumeClaim:
+          claimName: {{ .Values.persistence.existingClaim | default (include "jackett.fullname" .) }}
+      {{- else }}
+        emptyDir: {}
+      {{- end -}}
