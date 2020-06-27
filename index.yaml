@@ -43,6 +43,15 @@ entries:
   jackett:
   - apiVersion: v1
     appVersion: "1.0"
+    created: "2020-06-27T17:29:49.046054+03:00"
+    description: Jackett Chart
+    digest: 9a7b18540c51b5d35b9d87ebfb23c06ad8b5d134a4f270391d1b1fd1a9170237
+    name: jackett
+    urls:
+    - https://github.com/webtor-io/helm-charts/releases/download/jackett-0.1.1/jackett-0.1.1.tgz
+    version: 0.1.1
+  - apiVersion: v1
+    appVersion: "1.0"
     created: "2020-06-27T16:33:06.511202+03:00"
     description: Jackett Chart
     digest: 7700a67105be6c78b371f0f0ff07e0d204e005897392026b35430639b29edfe3
