@@ -40,6 +40,16 @@ entries:
     urls:
     - https://github.com/webtor-io/helm-charts/releases/download/external-proxy-0.1.0/external-proxy-0.1.0.tgz
     version: 0.1.0
+  image-transformer:
+  - apiVersion: v1
+    appVersion: "1.0"
+    created: "2020-08-12T00:14:11.368009+03:00"
+    description: Image Transformer Chart
+    digest: 07e940e5b9c77ded60f10ecb45a733ae2d482ddd6b884faf0f949993397cf9b5
+    name: image-transformer
+    urls:
+    - https://github.com/webtor-io/helm-charts/releases/download/image-transformer-0.1.0/image-transformer-0.1.0.tgz
+    version: 0.1.0
   jackett:
   - apiVersion: v1
     appVersion: "1.0"
