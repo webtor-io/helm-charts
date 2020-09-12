@@ -122,6 +122,15 @@ entries:
   torrent-cache-cleaner:
   - apiVersion: v1
     appVersion: "1.0"
+    created: "2020-09-12T21:55:46.347474+03:00"
+    description: A Helm chart for Torrent Cache Cleaner
+    digest: 04ac4198bb279cad92447da037d53774e80b6ad2dc5e08d3f128a063cc29f6e3
+    name: torrent-cache-cleaner
+    urls:
+    - https://github.com/webtor-io/helm-charts/releases/download/torrent-cache-cleaner-0.1.2/torrent-cache-cleaner-0.1.2.tgz
+    version: 0.1.2
+  - apiVersion: v1
+    appVersion: "1.0"
     created: "2020-09-12T18:06:17.799891+03:00"
     description: A Helm chart for Torrent Cache Cleaner
     digest: bebb8fc0ef4134edf80a89d6714ff2ac54904e866b8e1d104091a494cbfb6533

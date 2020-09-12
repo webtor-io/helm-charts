@@ -27,7 +27,7 @@ spec:
               - name: AWS_BUCKET
                 value: "{{ .Values.aws.bucket }}"
               - name: AWS_BUCKET_SPREAD
-                value: "{{ .Values.snapshot.aws.bucketSpread }}"
+                value: "{{ .Values.aws.bucketSpread }}"
               - name: AWS_ENDPOINT
                 value: "{{ .Values.aws.endpoint }}"
               - name: AWS_REGION
