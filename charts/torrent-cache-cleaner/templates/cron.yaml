@@ -26,6 +26,8 @@ spec:
                 value: "{{ .Values.aws.secretAccessKey }}"
               - name: AWS_BUCKET
                 value: "{{ .Values.aws.bucket }}"
+              - name: AWS_BUCKET_SPREAD
+                value: "{{ .Values.snapshot.aws.bucketSpread }}"
               - name: AWS_ENDPOINT
                 value: "{{ .Values.aws.endpoint }}"
               - name: AWS_REGION

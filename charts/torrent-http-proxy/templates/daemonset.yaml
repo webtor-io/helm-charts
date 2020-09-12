@@ -68,6 +68,8 @@ spec:
               value: "{{ .Values.snapshot.aws.endpoint }}"
             - name: AWS_REGION
               value: "{{ .Values.snapshot.aws.region }}"
+            - name: AWS_BUCKET_SPREAD
+              value: "{{ .Values.snapshot.aws.bucketSpread }}"
           ports:
             - name: http
               containerPort: 8080

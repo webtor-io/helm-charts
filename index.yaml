@@ -122,6 +122,15 @@ entries:
   torrent-cache-cleaner:
   - apiVersion: v1
     appVersion: "1.0"
+    created: "2020-09-12T18:06:17.799891+03:00"
+    description: A Helm chart for Torrent Cache Cleaner
+    digest: bebb8fc0ef4134edf80a89d6714ff2ac54904e866b8e1d104091a494cbfb6533
+    name: torrent-cache-cleaner
+    urls:
+    - https://github.com/webtor-io/helm-charts/releases/download/torrent-cache-cleaner-0.1.1/torrent-cache-cleaner-0.1.1.tgz
+    version: 0.1.1
+  - apiVersion: v1
+    appVersion: "1.0"
     created: "2020-05-08T20:16:34.419554+03:00"
     description: A Helm chart for Torrent Cache Cleaner
     digest: 6cb8455cafef6ffde8a216d7300fcd1accd179890d8aa3968b09e687fc63f812
@@ -130,6 +139,15 @@ entries:
     - https://github.com/webtor-io/helm-charts/releases/download/torrent-cache-cleaner-0.1.0/torrent-cache-cleaner-0.1.0.tgz
     version: 0.1.0
   torrent-http-proxy:
+  - apiVersion: v1
+    appVersion: "1.0"
+    created: "2020-09-12T18:06:18.228423+03:00"
+    description: A Torrent HTTP Proxy Chart
+    digest: 7ad3a4640dbf45bd8f38bb4634a52034f77cea635e4ede2ccf66008cb8b40557
+    name: torrent-http-proxy
+    urls:
+    - https://github.com/webtor-io/helm-charts/releases/download/torrent-http-proxy-0.1.4/torrent-http-proxy-0.1.4.tgz
+    version: 0.1.4
   - apiVersion: v1
     appVersion: "1.0"
     created: "2020-05-03T15:43:29.920977+03:00"
@@ -177,6 +195,15 @@ entries:
     - https://github.com/webtor-io/helm-charts/releases/download/torrent-store-0.1.0/torrent-store-0.1.0.tgz
     version: 0.1.0
   torrent-web-cache:
+  - apiVersion: v1
+    appVersion: "1.0"
+    created: "2020-09-12T18:06:18.836479+03:00"
+    description: Caching proxy for torrent content with S3-backend
+    digest: 072ad03f15e879dfaea62eb23d44b1c1b83aebb23fa036d4ec95623a7e97ccad
+    name: torrent-web-cache
+    urls:
+    - https://github.com/webtor-io/helm-charts/releases/download/torrent-web-cache-0.1.4/torrent-web-cache-0.1.4.tgz
+    version: 0.1.4
   - apiVersion: v1
     appVersion: "1.0"
     created: "2020-05-03T18:13:16.667845+03:00"

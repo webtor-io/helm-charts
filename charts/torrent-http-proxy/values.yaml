@@ -37,6 +37,7 @@ snapshot:
     bucket: ""
     endpoint: ""
     region: ""
+    bucketSpread: ""
 
 clients: {}
 

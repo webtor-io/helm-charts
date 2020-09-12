@@ -19,5 +19,6 @@ aws:
   accessKeyId: ""
   secretAccessKey: ""
   bucket: ""
+  bucketSpread: ""
   endpoint: ""
   region: ""
