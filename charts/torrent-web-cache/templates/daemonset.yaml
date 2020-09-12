@@ -35,7 +35,7 @@ spec:
             - name: AWS_REGION
               value: "{{ .Values.aws.region }}"
             - name: AWS_BUCKET_SPREAD
-              value: "{{ .Values.snapshot.aws.bucketSpread }}"
+              value: "{{ .Values.aws.bucketSpread }}"
           ports:
             - name: http
               containerPort: 8080
