@@ -23,6 +23,7 @@ aws:
   bucket: ""
   endpoint: ""
   region: ""
+  noSSL: ""
 
 resources: {}
 

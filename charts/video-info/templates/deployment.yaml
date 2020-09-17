@@ -38,6 +38,8 @@ spec:
               value: "{{ .Values.aws.endpoint }}"
             - name: AWS_REGION
               value: "{{ .Values.aws.region }}"
+            - name: AWS_NO_SSL
+              value: "{{ .Values.aws.noSSL }}"
             - name: USE_S3
               value: "{{ .Values.aws.enabled }}"
           ports:

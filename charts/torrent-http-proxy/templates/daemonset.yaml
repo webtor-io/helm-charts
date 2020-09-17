@@ -70,6 +70,8 @@ spec:
               value: "{{ .Values.snapshot.aws.region }}"
             - name: AWS_BUCKET_SPREAD
               value: "{{ .Values.snapshot.aws.bucketSpread }}"
+            - name: AWS_NO_SSL
+              value: "{{ .Values.snapshot.aws.noSSL }}"
           ports:
             - name: http
               containerPort: 8080

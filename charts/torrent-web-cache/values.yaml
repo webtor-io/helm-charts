@@ -13,6 +13,7 @@ aws:
   bucketSpread: ""
   endpoint: ""
   region: ""
+  noSSL: ""
 
 service:
   type: ClusterIP

@@ -28,6 +28,8 @@ spec:
                 value: "{{ .Values.aws.bucket }}"
               - name: AWS_BUCKET_SPREAD
                 value: "{{ .Values.aws.bucketSpread }}"
+              - name: AWS_NO_SSL
+                value: "{{ .Values.aws.noSSL }}"
               - name: AWS_ENDPOINT
                 value: "{{ .Values.aws.endpoint }}"
               - name: AWS_REGION

@@ -38,6 +38,7 @@ snapshot:
     endpoint: ""
     region: ""
     bucketSpread: ""
+    noSSL: ""
 
 clients: {}
 

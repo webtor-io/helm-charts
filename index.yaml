@@ -122,6 +122,15 @@ entries:
   torrent-cache-cleaner:
   - apiVersion: v1
     appVersion: "1.0"
+    created: "2020-09-18T00:28:34.144192+03:00"
+    description: A Helm chart for Torrent Cache Cleaner
+    digest: 21b53a22178728fcabe77a719e0799efa2a195c4d6749a2407d697b428ae674d
+    name: torrent-cache-cleaner
+    urls:
+    - https://github.com/webtor-io/helm-charts/releases/download/torrent-cache-cleaner-0.1.3/torrent-cache-cleaner-0.1.3.tgz
+    version: 0.1.3
+  - apiVersion: v1
+    appVersion: "1.0"
     created: "2020-09-12T21:55:46.347474+03:00"
     description: A Helm chart for Torrent Cache Cleaner
     digest: 04ac4198bb279cad92447da037d53774e80b6ad2dc5e08d3f128a063cc29f6e3
@@ -148,6 +157,15 @@ entries:
     - https://github.com/webtor-io/helm-charts/releases/download/torrent-cache-cleaner-0.1.0/torrent-cache-cleaner-0.1.0.tgz
     version: 0.1.0
   torrent-http-proxy:
+  - apiVersion: v1
+    appVersion: "1.0"
+    created: "2020-09-18T00:28:34.854295+03:00"
+    description: A Torrent HTTP Proxy Chart
+    digest: 0ea932bc5013b766d8103bd5d06d778a2c93a7f4e424826281d35c6b4531f1b4
+    name: torrent-http-proxy
+    urls:
+    - https://github.com/webtor-io/helm-charts/releases/download/torrent-http-proxy-0.1.5/torrent-http-proxy-0.1.5.tgz
+    version: 0.1.5
   - apiVersion: v1
     appVersion: "1.0"
     created: "2020-09-12T18:06:18.228423+03:00"
@@ -206,6 +224,15 @@ entries:
   torrent-web-cache:
   - apiVersion: v1
     appVersion: "1.0"
+    created: "2020-09-18T00:28:36.295334+03:00"
+    description: Caching proxy for torrent content with S3-backend
+    digest: 09178b04c637b0d08aa1936a7c58a81c0cb23ebdb8c2543098b424cdbdc132fd
+    name: torrent-web-cache
+    urls:
+    - https://github.com/webtor-io/helm-charts/releases/download/torrent-web-cache-0.1.6/torrent-web-cache-0.1.6.tgz
+    version: 0.1.6
+  - apiVersion: v1
+    appVersion: "1.0"
     created: "2020-09-12T19:16:32.426972+03:00"
     description: Caching proxy for torrent content with S3-backend
     digest: 0138a5d9a5805ff8624d3263b9ae3698b8e43b62dc32ed444224cd8f8868f499
@@ -261,6 +288,15 @@ entries:
   video-info:
   - apiVersion: v1
     appVersion: "1.0"
+    created: "2020-09-18T00:28:36.770395+03:00"
+    description: Video Info Chart
+    digest: ca0812c0c8362c2c3451c9d4175dcc60271a4008019dca301ac4c275781968b3
+    name: video-info
+    urls:
+    - https://github.com/webtor-io/helm-charts/releases/download/video-info-0.1.3/video-info-0.1.3.tgz
+    version: 0.1.3
+  - apiVersion: v1
+    appVersion: "1.0"
     created: "2020-05-14T20:59:33.658509+03:00"
     description: Video Info Chart
     digest: a3dc4fc569a4ba4e3ff193e71ab48c5f1075780ec3cc72b06a8f03e2c188043e
@@ -287,6 +323,15 @@ entries:
     - https://github.com/webtor-io/helm-charts/releases/download/video-info-0.1.0/video-info-0.1.0.tgz
     version: 0.1.0
   video-thumbnails-generator:
+  - apiVersion: v1
+    appVersion: "1.0"
+    created: "2020-09-18T00:28:37.409866+03:00"
+    description: Video Thumbnails Generator Chart
+    digest: 9a5b58160cc13d1027a295dc80997fe39338d8710d9ab1b71b635e3202d08bcb
+    name: video-thumbnails-generator
+    urls:
+    - https://github.com/webtor-io/helm-charts/releases/download/video-thumbnails-generator-0.1.2/video-thumbnails-generator-0.1.2.tgz
+    version: 0.1.2
   - apiVersion: v1
     appVersion: "1.0"
     created: "2020-06-26T01:04:56.992495+03:00"
