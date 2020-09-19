@@ -31,14 +31,15 @@ transcoder:
 
 snapshot:
   enabled: false
-  aws:
-    accessKeyId: ""
-    secretAccessKey: ""
-    bucket: ""
-    endpoint: ""
-    region: ""
-    bucketSpread: ""
-    noSSL: ""
+
+aws:
+  accessKeyId: ""
+  secretAccessKey: ""
+  bucket: ""
+  endpoint: ""
+  region: ""
+  bucketSpread: ""
+  noSSL: ""
 
 clients: {}
 

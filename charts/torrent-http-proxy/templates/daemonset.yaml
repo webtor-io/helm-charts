@@ -59,19 +59,19 @@ spec:
             - name: USE_SNAPSHOT
               value: "{{ .Values.snapshot.enabled }}"
             - name: AWS_ACCESS_KEY_ID
-              value: "{{ .Values.snapshot.aws.accessKeyId }}"
+              value: "{{ .Values.aws.accessKeyId }}"
             - name: AWS_SECRET_ACCESS_KEY
-              value: "{{ .Values.snapshot.aws.secretAccessKey }}"
+              value: "{{ .Values.aws.secretAccessKey }}"
             - name: AWS_BUCKET
-              value: "{{ .Values.snapshot.aws.bucket }}"
+              value: "{{ .Values.aws.bucket }}"
             - name: AWS_ENDPOINT
-              value: "{{ .Values.snapshot.aws.endpoint }}"
+              value: "{{ .Values.aws.endpoint }}"
             - name: AWS_REGION
-              value: "{{ .Values.snapshot.aws.region }}"
+              value: "{{ .Values.aws.region }}"
             - name: AWS_BUCKET_SPREAD
-              value: "{{ .Values.snapshot.aws.bucketSpread }}"
+              value: "{{ .Values.aws.bucketSpread }}"
             - name: AWS_NO_SSL
-              value: "{{ .Values.snapshot.aws.noSSL }}"
+              value: "{{ .Values.aws.noSSL }}"
           ports:
             - name: http
               containerPort: 8080
