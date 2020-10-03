@@ -1,5 +1,15 @@
 apiVersion: v1
 entries:
+  abuse-fetcher:
+  - apiVersion: v1
+    appVersion: "1.0"
+    created: "2020-10-03T14:25:55.98208+03:00"
+    description: A Helm chart for Abuse Fetcher
+    digest: 025a2368e936e6ba7c211e5cd5a1e483de03b374a858b60c9586440f0cd795f7
+    name: abuse-fetcher
+    urls:
+    - https://github.com/webtor-io/helm-charts/releases/download/abuse-fetcher-0.1.0/abuse-fetcher-0.1.0.tgz
+    version: 0.1.0
   abuse-store:
   - apiVersion: v1
     appVersion: "1.0"
@@ -92,6 +102,15 @@ entries:
   node-dns-syncer:
   - apiVersion: v1
     appVersion: "1.0"
+    created: "2020-10-03T14:25:58.492719+03:00"
+    description: A Helm chart for Node DNS Syncer
+    digest: 746bd3ba93debed268416bfe1b951bf9e03e16f2e37ae097a4c34a636f902340
+    name: node-dns-syncer
+    urls:
+    - https://github.com/webtor-io/helm-charts/releases/download/node-dns-syncer-0.1.1/node-dns-syncer-0.1.1.tgz
+    version: 0.1.1
+  - apiVersion: v1
+    appVersion: "1.0"
     created: "2020-01-12T18:50:51.440634+03:00"
     description: A Helm chart for Node DNS Syncer
     digest: a99d4da82976e3a2d2d87af18a01e3f7a94a234f854ba986a98bffd484a06849
@@ -157,6 +176,15 @@ entries:
     - https://github.com/webtor-io/helm-charts/releases/download/torrent-cache-cleaner-0.1.0/torrent-cache-cleaner-0.1.0.tgz
     version: 0.1.0
   torrent-http-proxy:
+  - apiVersion: v1
+    appVersion: "1.0"
+    created: "2020-10-03T14:26:01.705759+03:00"
+    description: A Torrent HTTP Proxy Chart
+    digest: 50f58975a621a48e16bf6558ade2b636f35507af47d242cd91c07b6fe14efef0
+    name: torrent-http-proxy
+    urls:
+    - https://github.com/webtor-io/helm-charts/releases/download/torrent-http-proxy-0.1.7/torrent-http-proxy-0.1.7.tgz
+    version: 0.1.7
   - apiVersion: v1
     appVersion: "1.0"
     created: "2020-09-19T14:03:47.174952+03:00"

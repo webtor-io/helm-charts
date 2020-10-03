@@ -14,6 +14,7 @@ jobNodeAffinity:
 redirect:
   enabled: ""
   prefix: "abra--"
+  addressType: "ExternalIP"
 
 seeder:
   image: webtor/torrent-web-seeder:latest
