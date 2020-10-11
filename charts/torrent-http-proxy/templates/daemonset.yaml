@@ -60,6 +60,10 @@ spec:
               value: "{{ .Values.redirect.addressType }}"
             - name: USE_SNAPSHOT
               value: "{{ .Values.snapshot.enabled }}"
+            - name: SNAPSHOT_START_THRESHOLD
+              value: "{{ .Values.snapshot.startThreshold }}"
+            - name: SNAPSHOT_START_FULL_DOWNLOAD_THRESHOLD
+              value: "{{ .Values.snapshot.startFullDownloadThreshold }}"
             - name: AWS_ACCESS_KEY_ID
               value: "{{ .Values.aws.accessKeyId }}"
             - name: AWS_SECRET_ACCESS_KEY

@@ -32,6 +32,8 @@ transcoder:
 
 snapshot:
   enabled: false
+  startThreshold: 0.5
+  startFullDownloadThreshold: 0.75
 
 aws:
   accessKeyId: ""
