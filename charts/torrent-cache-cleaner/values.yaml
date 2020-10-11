@@ -15,6 +15,10 @@ tolerations: []
 
 affinity: {}
 
+cleaner:
+  doneExpire: 36
+  partialExpire: 12
+
 aws:
   accessKeyId: ""
   secretAccessKey: ""

@@ -34,6 +34,10 @@ spec:
                 value: "{{ .Values.aws.endpoint }}"
               - name: AWS_REGION
                 value: "{{ .Values.aws.region }}"
+              - name: DONE_TORRENTS_EXPIRE_HOURS
+                value: "{{ .Values.cleaner.doneExpire }}"
+              - name: PARTIAL_TORRENTS_EXPIRE_HOURS
+                value: "{{ .Values.cleaner.partialExpire }}"
           restartPolicy: Never
         {{- with .Values.affinity }}
           affinity:
