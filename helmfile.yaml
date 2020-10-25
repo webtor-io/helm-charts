@@ -37,6 +37,10 @@ releases:
   namespace: webtor
   chart: webtor/srt2vtt
   version: 0.1.0
+- name: job-cleaner
+  namespace: webtor
+  chart: webtor/job-cleaner
+  version: 0.1.0
 - name: torrent-http-proxy
   namespace: webtor
   chart: webtor/torrent-http-proxy
