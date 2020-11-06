@@ -10,6 +10,9 @@ metadata:
   name: {{ template "dnslb.fullname" . }}
 rules:
 - apiGroups: [""]
+  resources: ["pods"]
+  verbs: ["list"]
+- apiGroups: [""]
   resources: ["nodes"]
   verbs: ["list", "get"]
 - apiGroups: ["extensions", "networking.k8s.io"]
