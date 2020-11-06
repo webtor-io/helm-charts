@@ -1,6 +1,23 @@
 # helm-charts
 
-This guide will show you how to install all essential components of webtor backend api to local k8s cluster (Minikube).
+This guide will show you how to install all essential components of webtor backend api to local k8s cluster.
+
+## Minimum system requirements
+vCPU: 4
+RAM: 4GB
+
+## Short way at Ubuntu
+
+```
+curl https://raw.githubusercontent.com/webtor-io/helm-charts/master/scripts/get-webtor.sh | sh
+```
+
+This will install single-node microk8s cluster and setup webtor on it, at the end of installation you will
+get values of listening GRPC and HTTP ports. All operations can take a long time.
+
+This was tested at Ubuntu 20.04.
+
+## Long way
 
 Let's start:
 
