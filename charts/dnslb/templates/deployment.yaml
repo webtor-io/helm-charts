@@ -1,0 +1,66 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: {{ include "dnslb.fullname" . }}
+  labels:
+    app.kubernetes.io/name: {{ include "dnslb.name" . }}
+    helm.sh/chart: {{ include "dnslb.chart" . }}
+    app.kubernetes.io/instance: {{ .Release.Name }}
+    app.kubernetes.io/managed-by: {{ .Release.Service }}
+spec:
+  replicas: {{ .Values.replicaCount }}
+  selector:
+    matchLabels:
+      app.kubernetes.io/name: {{ include "dnslb.name" . }}
+      app.kubernetes.io/instance: {{ .Release.Name }}
+  template:
+    metadata:
+      labels:
+        app.kubernetes.io/name: {{ include "dnslb.name" . }}
+        app.kubernetes.io/instance: {{ .Release.Name }}
+    spec:
+      containers:
+        - name: {{ .Chart.Name }}
+          image: "{{ .Values.image.repository }}:{{ .Values.image.tag }}"
+          imagePullPolicy: {{ .Values.image.pullPolicy }}
+          env:
+            - name: POD_SELECTOR
+              value: "{{ .Values.pod.selector }}"
+            - name: POD_NAMESPACE
+              value: "{{ .Values.pod.namespace }}"
+            - name: INGRESS_NAMESPACE
+              value: "{{ .Values.ingress.namespace }}"
+            - name: NODE_SELECTOR
+              value: "{{ .Values.node.selector }}"
+            - name: NODE_ADDRESS_TYPE
+              value: "{{ .Values.node.addressType }}"
+            - name: CF_API_EMAIL
+              value: "{{ .Values.cloudflare.apiEmail }}"
+            - name: CF_API_KEY
+              value: "{{ .Values.cloudflare.apiKey }}"
+            - name: DAEMON
+              value: "true"
+            - name: VERBOSE
+              value: "{{ .Values.log.verbose }}"
+            - name: JSON_LOG
+              value: "{{ .Values.log.json }}"
+            - name: CHECK_INTERVAL
+              value: "{{ .Values.interval.check }}"
+            - name: FULL_CHECK_INTERVAL
+              value: "{{ .Values.interval.fullCheck }}"
+            - name: CONCURRENCY
+              value: "{{ .Values.concurrency }}"
+          resources:
+            {{- toYaml .Values.resources | nindent 12 }}
+      {{- with .Values.nodeSelector }}
+      nodeSelector:
+        {{- toYaml . | nindent 8 }}
+      {{- end }}
+    {{- with .Values.affinity }}
+      affinity:
+        {{- toYaml . | nindent 8 }}
+    {{- end }}
+    {{- with .Values.tolerations }}
+      tolerations:
+        {{- toYaml . | nindent 8 }}
+    {{- end }}

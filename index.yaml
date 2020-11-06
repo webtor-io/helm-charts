@@ -40,6 +40,16 @@ entries:
     urls:
     - https://github.com/webtor-io/helm-charts/releases/download/content-prober-0.1.0/content-prober-0.1.0.tgz
     version: 0.1.0
+  dnslb:
+  - apiVersion: v1
+    appVersion: "1.0"
+    created: "2020-11-06T10:54:49.988513+03:00"
+    description: A Helm chart for DNSLB
+    digest: 7a0df244b1204446eaa245cec3f1e4d64ba8714aa9725fd21be900c98feb889f
+    name: dnslb
+    urls:
+    - https://github.com/webtor-io/helm-charts/releases/download/dnslb-0.1.0/dnslb-0.1.0.tgz
+    version: 0.1.0
   external-proxy:
   - apiVersion: v1
     appVersion: "1.0"

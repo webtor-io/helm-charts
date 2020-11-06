@@ -14,3 +14,5 @@ chmod +x helmfile
 sudo mv ./helmfile /usr/local/bin/
 curl -L  'https://raw.githubusercontent.com/webtor-io/helm-charts/master/helmfile.yaml' > helmfile.yaml
 sudo helmfile --helm-binary=microk8s.helm apply
+sudo microk8s kubectl get svc torrent-http-proxy -o yaml -n webtor | grep http -A 1 | grep nodePort | awk '{print "Listening HTTP at port "  $2}'
+sudo microk8s kubectl get svc torrent-http-proxy -o yaml -n webtor | grep grpc -A 1 | grep nodePort | awk '{print "Listening GRPC at port "  $2}'
