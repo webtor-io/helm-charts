@@ -118,6 +118,16 @@ entries:
     urls:
     - https://github.com/webtor-io/helm-charts/releases/download/magnet2torrent-0.1.0/magnet2torrent-0.1.0.tgz
     version: 0.1.0
+  nginx-vod:
+  - apiVersion: v1
+    appVersion: "1.0"
+    created: "2020-11-08T19:57:56.341779+03:00"
+    description: Nginx VOD Chart
+    digest: 3ce84427ef2c4f41be55351670b1af2c81398ede1bf3925a38ea40a48678edfa
+    name: nginx-vod
+    urls:
+    - https://github.com/webtor-io/helm-charts/releases/download/nginx-vod-0.1.0/nginx-vod-0.1.0.tgz
+    version: 0.1.0
   node-dns-syncer:
   - apiVersion: v1
     appVersion: "1.0"

@@ -1,0 +1,23 @@
+image:
+  repository: webtor/nginx-vod
+  tag: latest
+  pullPolicy: IfNotPresent
+
+nameOverride: ""
+fullnameOverride: ""
+
+secret: ""
+
+service:
+  type: ClusterIP
+  ports: 
+    http: 80
+  topologyKeys: []
+
+resources: {}
+
+nodeSelector: {}
+
+tolerations: []
+
+affinity: {}
