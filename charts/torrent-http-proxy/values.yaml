@@ -11,6 +11,8 @@ jobNodeAffinity:
   key: ""
   value: ""
 
+jobRequestAffinity: false
+
 redirect:
   enabled: ""
   prefix: "abra--"
