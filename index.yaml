@@ -118,6 +118,16 @@ entries:
     urls:
     - https://github.com/webtor-io/helm-charts/releases/download/magnet2torrent-0.1.0/magnet2torrent-0.1.0.tgz
     version: 0.1.0
+  minio-s3-gateway:
+  - apiVersion: v1
+    appVersion: "1.0"
+    created: "2020-11-23T10:49:57.700021+03:00"
+    description: Minio S3 Gateway Chart
+    digest: 5827416b98d9b6168a190700111ff105d7781e18663e55c4a33a4dae8c3ab6e6
+    name: minio-s3-gateway
+    urls:
+    - https://github.com/webtor-io/helm-charts/releases/download/minio-s3-gateway-0.1.0/minio-s3-gateway-0.1.0.tgz
+    version: 0.1.0
   nginx-vod:
   - apiVersion: v1
     appVersion: "1.0"
