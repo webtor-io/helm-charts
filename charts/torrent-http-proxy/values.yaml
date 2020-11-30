@@ -36,6 +36,7 @@ snapshot:
   enabled: false
   startThreshold: 0.5
   startFullDownloadThreshold: 0.75
+  torrentSizeLimit: 10
 
 aws:
   accessKeyId: ""

@@ -70,6 +70,8 @@ spec:
               value: "{{ .Values.snapshot.startThreshold }}"
             - name: SNAPSHOT_START_FULL_DOWNLOAD_THRESHOLD
               value: "{{ .Values.snapshot.startFullDownloadThreshold }}"
+            - name: SNAPSHOT_TORRENT_SIZE_LIMIT
+              value: "{{ .Values.snapshot.torrentSizeLimit }}"
             - name: AWS_ACCESS_KEY_ID
               value: "{{ .Values.aws.accessKeyId }}"
             - name: AWS_SECRET_ACCESS_KEY
