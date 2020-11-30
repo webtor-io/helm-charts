@@ -118,6 +118,16 @@ entries:
     urls:
     - https://github.com/webtor-io/helm-charts/releases/download/magnet2torrent-0.1.0/magnet2torrent-0.1.0.tgz
     version: 0.1.0
+  minio:
+  - apiVersion: v1
+    appVersion: "1.0"
+    created: "2020-11-30T23:06:15.736784+03:00"
+    description: Minio Chart
+    digest: fccd6e4e764c73b6eb6bc4d31e3b34c4576e978230a411feac6ecc54f60864e8
+    name: minio
+    urls:
+    - https://github.com/webtor-io/helm-charts/releases/download/minio-0.1.0/minio-0.1.0.tgz
+    version: 0.1.0
   minio-s3-gateway:
   - apiVersion: v1
     appVersion: "1.0"
