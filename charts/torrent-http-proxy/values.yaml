@@ -13,6 +13,18 @@ jobNodeAffinity:
 
 jobRequestAffinity: false
 
+promAddr: ""
+
+node:
+  cpu:
+    high: ""
+    low: ""
+  bandwidth:
+    high: ""
+    low: ""
+  network:
+    iface: ""
+
 redirect:
   enabled: ""
   prefix: "abra--"

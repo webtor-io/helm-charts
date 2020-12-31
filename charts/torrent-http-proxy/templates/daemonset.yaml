@@ -88,6 +88,18 @@ spec:
               value: "{{ .Values.aws.bucketSpread }}"
             - name: AWS_NO_SSL
               value: "{{ .Values.aws.noSSL }}"
+            - name: PROM_ADDR
+              value: "{{ .Values.promAddr }}"
+            - name: NODE_HIGH_CPU
+              value: "{{ .Values.node.cpu.high }}"
+            - name: NODE_LOW_CPU
+              value: "{{ .Values.node.cpu.low }}"
+            - name: NODE_HIGH_BANDWIDTH
+              value: "{{ .Values.node.bandwidth.high }}"
+            - name: NODE_LOW_BANDWIDTH
+              value: "{{ .Values.node.bandwidth.low }}"
+            - name: NODE_NETWORK_IFACE
+              value: "{{ .Values.node.network.iface }}"
           ports:
             - name: http
               containerPort: 8080
