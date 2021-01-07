@@ -180,6 +180,15 @@ entries:
   torrent-archiver:
   - apiVersion: v1
     appVersion: "1.0"
+    created: "2021-01-07T14:08:57.599677+03:00"
+    description: Torrent Archiver Chart
+    digest: 9e77d9f5c13bc699793f50dbb3798a5f8e688951ab18c0af997ce8911ca5b839
+    name: torrent-archiver
+    urls:
+    - https://github.com/webtor-io/helm-charts/releases/download/torrent-archiver-0.1.1/torrent-archiver-0.1.1.tgz
+    version: 0.1.1
+  - apiVersion: v1
+    appVersion: "1.0"
     created: "2020-02-03T22:59:05.413484+03:00"
     description: Torrent Archiver Chart
     digest: 639eefd1c22721f375ab3e59cf732e7b114f5544f7bdf785c137b0fbdd8d8174
