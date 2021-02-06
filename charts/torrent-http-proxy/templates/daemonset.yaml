@@ -12,6 +12,10 @@ spec:
     matchLabels:
       app.kubernetes.io/name: {{ include "torrent-http-proxy.name" . }}
       app.kubernetes.io/instance: {{ .Release.Name }}
+  updateStrategy:
+    type: RollingUpdate
+    rollingUpdate:
+      maxUnavailable: {{ .Values.update.maxUnavailable }}
   template:
     metadata:
       annotations:
@@ -106,6 +110,9 @@ spec:
               protocol: TCP
             - name: httpprobe
               containerPort: 8081
+              protocol: TCP
+            - name: httpprom
+              containerPort: 8082
               protocol: TCP
             - name: grpc
               containerPort: 50051

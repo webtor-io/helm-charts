@@ -15,6 +15,14 @@ jobRequestAffinity: false
 
 promAddr: ""
 
+update:
+  maxUnavailable: 1
+
+metrics:
+  enabled: false
+  serviceMonitor:
+    enabled: false
+
 node:
   cpu:
     high: ""
@@ -69,6 +77,7 @@ service:
   type: ClusterIP
   ports: 
     http: 80
+    httpprom: 8082
     grpc: 50051
   topologyKeys: []
 

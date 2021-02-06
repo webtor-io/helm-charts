@@ -18,6 +18,10 @@ spec:
       targetPort: grpc
       protocol: TCP
       name: grpc
+    - port: {{ .Values.service.ports.httpprom }}
+      targetPort: httpprom
+      protocol: TCP
+      name: httpprom
 {{- if .Values.service.topologyKeys }}
   topologyKeys:
   {{- range .Values.service.topologyKeys }}
