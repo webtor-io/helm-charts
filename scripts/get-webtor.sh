@@ -5,9 +5,10 @@ sudo microk8s status --wait-ready
 sudo microk8s kubectl get nodes
 sudo microk8s enable helm
 sudo microk8s enable dns
-sudo microk8s helm init --wait
+sudo microk8s helm init --stable-repo-url https://charts.helm.sh/stable --wait
 curl -L https://github.com/databus23/helm-diff/releases/download/v3.1.3/helm-diff-linux.tgz | sudo tar -C $(microk8s helm home)/plugins -xzv
 sudo microk8s helm repo add webtor https://charts.webtor.io
+sudo microk8s helm repo add bitnami https://charts.bitnami.com/bitnami
 sudo microk8s enable metrics-server
 curl -L 'https://github.com/roboll/helmfile/releases/download/v0.90.5/helmfile_linux_amd64' > helmfile
 chmod +x helmfile
