@@ -443,6 +443,16 @@ entries:
     urls:
     - https://github.com/webtor-io/helm-charts/releases/download/torrent-web-cache-0.1.0/torrent-web-cache-0.1.0.tgz
     version: 0.1.0
+  transcode-web-cache:
+  - apiVersion: v1
+    appVersion: "1.0"
+    created: "2021-03-11T23:33:02.532085+03:00"
+    description: Caching proxy for transcoded content with S3-backend
+    digest: a19d1e6ce70e0f606da8495ec63eed0a55750e50d2f6d5c9648561b6b04a96a5
+    name: transcode-web-cache
+    urls:
+    - https://github.com/webtor-io/helm-charts/releases/download/transcode-web-cache-0.1.0/transcode-web-cache-0.1.0.tgz
+    version: 0.1.0
   video-info:
   - apiVersion: v1
     appVersion: "1.0"
