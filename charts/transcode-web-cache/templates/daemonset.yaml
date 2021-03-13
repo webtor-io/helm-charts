@@ -13,6 +13,10 @@ spec:
     matchLabels:
       app.kubernetes.io/name: {{ include "transcode-web-cache-chart.name" . }}
       app.kubernetes.io/instance: {{ .Release.Name }}
+  updateStrategy:
+    type: RollingUpdate
+    rollingUpdate:
+      maxUnavailable: {{ .Values.update.maxUnavailable }}
   template:
     metadata:
       labels:

@@ -131,6 +131,15 @@ entries:
   minio-s3-gateway:
   - apiVersion: v1
     appVersion: "1.0"
+    created: "2021-03-13T13:54:08.548221+03:00"
+    description: Minio S3 Gateway Chart
+    digest: 33a137fbc05454fc219f8fec38a9fd442a5605df30044f96304d8b8236b3e3e3
+    name: minio-s3-gateway
+    urls:
+    - https://github.com/webtor-io/helm-charts/releases/download/minio-s3-gateway-0.1.1/minio-s3-gateway-0.1.1.tgz
+    version: 0.1.1
+  - apiVersion: v1
+    appVersion: "1.0"
     created: "2020-11-23T10:49:57.700021+03:00"
     description: Minio S3 Gateway Chart
     digest: 5827416b98d9b6168a190700111ff105d7781e18663e55c4a33a4dae8c3ab6e6
@@ -382,6 +391,15 @@ entries:
   torrent-web-cache:
   - apiVersion: v1
     appVersion: "1.0"
+    created: "2021-03-13T13:54:14.12948+03:00"
+    description: Caching proxy for torrent content with S3-backend
+    digest: 697b326e6411a1f6d75926148e7cfbe5fe0811a476c0cf99bc0b204a59c68b58
+    name: torrent-web-cache
+    urls:
+    - https://github.com/webtor-io/helm-charts/releases/download/torrent-web-cache-0.1.7/torrent-web-cache-0.1.7.tgz
+    version: 0.1.7
+  - apiVersion: v1
+    appVersion: "1.0"
     created: "2020-09-18T00:28:36.295334+03:00"
     description: Caching proxy for torrent content with S3-backend
     digest: 09178b04c637b0d08aa1936a7c58a81c0cb23ebdb8c2543098b424cdbdc132fd
@@ -444,6 +462,15 @@ entries:
     - https://github.com/webtor-io/helm-charts/releases/download/torrent-web-cache-0.1.0/torrent-web-cache-0.1.0.tgz
     version: 0.1.0
   transcode-web-cache:
+  - apiVersion: v1
+    appVersion: "1.0"
+    created: "2021-03-13T13:54:14.513349+03:00"
+    description: Caching proxy for transcoded content with S3-backend
+    digest: 8ef415282fa2a1febde1537ffa23c6a8c3091b82e78ae84bd1e9933a0ca22e39
+    name: transcode-web-cache
+    urls:
+    - https://github.com/webtor-io/helm-charts/releases/download/transcode-web-cache-0.1.1/transcode-web-cache-0.1.1.tgz
+    version: 0.1.1
   - apiVersion: v1
     appVersion: "1.0"
     created: "2021-03-11T23:33:02.532085+03:00"

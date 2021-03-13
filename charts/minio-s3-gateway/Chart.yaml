@@ -2,4 +2,4 @@ apiVersion: v1
 appVersion: "1.0"
 description: Minio S3 Gateway Chart
 name: minio-s3-gateway
-version: 0.1.0
+version: 0.1.1

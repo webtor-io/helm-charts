@@ -6,6 +6,9 @@ image:
 nameOverride: ""
 fullnameOverride: ""
 
+update:
+  maxUnavailable: 1
+
 aws:
   accessKeyId: ""
   secretAccessKey: ""
