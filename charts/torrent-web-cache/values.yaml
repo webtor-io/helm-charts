@@ -9,6 +9,9 @@ fullnameOverride: ""
 update:
   maxUnavailable: 1
 
+preload:
+  cacheSize: "10G"
+
 aws:
   accessKeyId: ""
   secretAccessKey: ""
