@@ -79,8 +79,9 @@ spec:
       volumes:
       - name: cache
       {{- if .Values.persistence.enabled }}
-        persistentVolumeClaim:
-          claimName: {{ .Values.persistence.existingClaim | default (include "torrent-web-cache-chart.fullname" .) }}
+        hostPath:
+          path: "{{ .Values.persistence.hostPath }}"
+          type: "{{ .Values.persistence.type }}"
       {{- else }}
         emptyDir: {}
       {{- end -}}

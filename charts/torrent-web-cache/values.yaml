@@ -14,7 +14,8 @@ preload:
 
 persistence:
   enabled: true
-  size: 20Gi
+  hostPath: /var/torrent-web-cache
+  type: DirectoryOrCreate
 
 aws:
   accessKeyId: ""
