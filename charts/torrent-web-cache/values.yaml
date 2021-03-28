@@ -10,7 +10,11 @@ update:
   maxUnavailable: 1
 
 preload:
-  cacheSize: "10G"
+  cacheSize: 10Gi
+
+persistence:
+  enabled: true
+  size: 20Gi
 
 aws:
   accessKeyId: ""
