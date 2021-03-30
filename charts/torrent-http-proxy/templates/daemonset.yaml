@@ -44,6 +44,14 @@ spec:
               value: "{{ .Values.jobNodeAffinity.key }}"
             - name: JOB_NODE_AFFINITY_VALUE
               value: "{{ .Values.jobNodeAffinity.value }}"
+            - name: JOB_NODE_SEEDER_AFFINITY_KEY
+              value: "{{ .Values.jobSeederNodeAffinity.key }}"
+            - name: JOB_NODE_SEEDER_AFFINITY_VALUE
+              value: "{{ .Values.jobSeederNodeAffinity.value }}"
+            - name: JOB_NODE_TRANSCODER_AFFINITY_KEY
+              value: "{{ .Values.jobTranscoderNodeAffinity.key }}"
+            - name: JOB_NODE_TRANSCODER_AFFINITY_VALUE
+              value: "{{ .Values.jobTranscoderNodeAffinity.value }}"
             - name: JOB_REQUEST_AFFINITY
               value: "{{ .Values.jobRequestAffinity }}"
             - name: SEEDER_IMAGE

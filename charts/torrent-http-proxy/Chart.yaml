@@ -2,4 +2,4 @@ apiVersion: v1
 appVersion: "1.0"
 description: A Torrent HTTP Proxy Chart
 name: torrent-http-proxy
-version: 0.1.13
+version: 0.1.14
