@@ -14,38 +14,69 @@ releases:
   namespace: webtor
   chart: webtor/content-prober
   version: 0.1.0
+  values:
+    - image:
+        tag: 0.1.0
 - name: magnet2torrent
   namespace: webtor
   chart: webtor/magnet2torrent
   version: 0.1.0
+  values:
+    - image:
+        tag: 0.1.0
 - name: external-proxy
   namespace: webtor
   chart: webtor/external-proxy
   version: 0.1.0
+  values:
+    - image:
+        tag: 0.1.0
 - name: video-info
   namespace: webtor
   chart: webtor/video-info
-  version: 0.1.0
+  version: 0.1.3
+  values:
+    - image:
+        tag: 0.1.0
 - name: torrent-archiver
   namespace: webtor
   chart: webtor/torrent-archiver
+  version: 0.1.1
+  values:
+    - image:
+        tag: 0.1.0
 - name: torrent-store
   namespace: webtor
   chart: webtor/torrent-store
   version: 0.1.0
+  values:
+    - image:
+        tag: 0.1.0
 - name: srt2vtt
   namespace: webtor
   chart: webtor/srt2vtt
   version: 0.1.0
+  values:
+    - image:
+        tag: 0.1.0
 - name: job-cleaner
   namespace: webtor
   chart: webtor/job-cleaner
   version: 0.1.0
+  values:
+    - image:
+        tag: 0.1.0
 - name: torrent-http-proxy
   namespace: webtor
   chart: webtor/torrent-http-proxy
-  version: 0.1.0
+  version: 0.1.15
   values:
+    - seeder:
+        image: webtor/torrent-web-seeder:0.1.0
+    - transcoder:
+        image: webtor/content-transcoder:0.1.0
     - service:
         type: NodePort
         port: 8080
+    - image:
+        tag: 0.1.0

@@ -31,13 +31,13 @@ metrics:
 
 node:
   cpu:
-    high: ""
-    low: ""
+    high: 0
+    low: 0
   bandwidth:
-    high: ""
-    low: ""
+    high: 0
+    low: 0
   network:
-    iface: ""
+    iface: "eth0"
 
 redirect:
   enabled: ""
