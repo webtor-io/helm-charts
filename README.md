@@ -17,6 +17,11 @@ get values of listening GRPC and HTTP ports. All operations can take a long time
 
 This was tested at Ubuntu 20.04.
 
+To update webtor components to the latest stable versions just use the following script:
+```
+curl https://raw.githubusercontent.com/webtor-io/helm-charts/master/scripts/update-webtor.sh | sh
+```
+
 ## Long way
 
 Let's start:
