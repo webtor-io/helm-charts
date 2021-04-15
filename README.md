@@ -97,7 +97,7 @@ Let's start:
    
    ```
    % curl -I http://192.168.64.3:30749
-   HTTP/1.1 500 Internal Server Error
+   HTTP/1.1 200 OK
    Date: Thu, 19 Dec 2019 19:44:43 GMT
    ```
    
