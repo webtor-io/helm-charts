@@ -593,6 +593,15 @@ entries:
   webtor-web-blog:
   - apiVersion: v1
     appVersion: "1.0"
+    created: "2021-04-25T11:35:20.358396+03:00"
+    description: Webtor Web Blog Chart
+    digest: 64e4ad3650abe55ea4957224928984251b436c5c77479fb20322c692ea92d454
+    name: webtor-web-blog
+    urls:
+    - https://github.com/webtor-io/helm-charts/releases/download/webtor-web-blog-0.1.1/webtor-web-blog-0.1.1.tgz
+    version: 0.1.1
+  - apiVersion: v1
+    appVersion: "1.0"
     created: "2020-03-10T01:52:22.511021+03:00"
     description: Webtor Web Blog Chart
     digest: e050c2bc89c82ae4706d047936fdf4af1da8a468f4561e6f5256c56b454bbab0
@@ -601,6 +610,15 @@ entries:
     - https://github.com/webtor-io/helm-charts/releases/download/webtor-web-blog-0.1.0/webtor-web-blog-0.1.0.tgz
     version: 0.1.0
   webtor-web-ui:
+  - apiVersion: v1
+    appVersion: "1.0"
+    created: "2021-04-25T11:35:20.941186+03:00"
+    description: Webtor Web UI Chart
+    digest: 317c029b0e9ec70b45162fbe32d1e23c69bffc2cc9b9dc93b7c0b0935d5ce735
+    name: webtor-web-ui
+    urls:
+    - https://github.com/webtor-io/helm-charts/releases/download/webtor-web-ui-0.1.2/webtor-web-ui-0.1.2.tgz
+    version: 0.1.2
   - apiVersion: v1
     appVersion: "1.0"
     created: "2021-04-10T17:11:57.929253+03:00"

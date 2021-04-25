@@ -28,12 +28,12 @@ spec:
             - name: http
               containerPort: 80
               protocol: TCP
-          livenessprobe:
-            httpget:
+          livenessProbe:
+            httpGet:
               path: /
               port: http
-          readinessprobe:
-            httpget:
+          readinessProbe:
+            httpGet:
               path: /
               port: http
           resources:
