@@ -44,7 +44,7 @@ spec:
               value: "{{ .Values.aws.noSSL }}"
             - name: PRELOAD_CACHE_SIZE
               value: "{{ .Values.preload.cacheSize }}"
-            - name: PRELOAD_CLEAR_CACHE_ON_EXIT_FLAG
+            - name: PRELOAD_CLEAR_CACHE_ON_EXIT
               value: "{{ .Values.preload.clearCacheOnExit }}"
           ports:
             - name: http
