@@ -11,6 +11,7 @@ update:
 
 preload:
   cacheSize: 10Gi
+  clearCacheOnExit: "false"
 
 persistence:
   enabled: true

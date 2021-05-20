@@ -1,0 +1,74 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: {{ include "webhook.fullname" . }}
+  labels:
+    app.kubernetes.io/name: {{ include "webhook.name" . }}
+    helm.sh/chart: {{ include "webhook.chart" . }}
+    app.kubernetes.io/instance: {{ .Release.Name }}
+    app.kubernetes.io/managed-by: {{ .Release.Service }}
+    linkerd.io/auto-inject: disabled
+spec:
+  replicas: {{ .Values.replicaCount }}
+  selector:
+    matchLabels:
+      app.kubernetes.io/name: {{ include "webhook.name" . }}
+      app.kubernetes.io/instance: {{ .Release.Name }}
+  template:
+    metadata:
+      labels:
+        app.kubernetes.io/name: {{ include "webhook.name" . }}
+        app.kubernetes.io/instance: {{ .Release.Name }}
+    spec:
+      containers:
+        - name: {{ .Chart.Name }}
+          image: "{{ .Values.image.repository }}:{{ .Values.image.tag }}"
+          imagePullPolicy: {{ .Values.image.pullPolicy }}
+          env:
+            - name: PG_PASSWORD
+              valueFrom:
+                secretKeyRef:
+                  name: "webhook.acid-{{ include "webhook.fullname" . }}.credentials.postgresql.acid.zalan.do"
+                  key: password
+            - name: PG_USER
+              valueFrom:
+                secretKeyRef:
+                  name: "webhook.acid-{{ include "webhook.fullname" . }}.credentials.postgresql.acid.zalan.do"
+                  key: username
+            - name: PG_HOST
+              value: "acid-{{ include "webhook.fullname" . }}-pooler"
+            - name: PG_PORT
+              value: "5432"
+            - name: PG_SSL
+              value: "true"
+            - name: PATREON_SECRET
+              value: {{ .Values.patreon.secret }}
+          ports:
+            - name: http
+              containerPort: 8080
+              protocol: TCP
+            - name: httpprobe
+              containerPort: 8081
+              protocol: TCP
+          livenessProbe:
+            httpGet:
+              path: /liveness
+              port: httpprobe
+          readinessProbe:
+            httpGet:
+              path: /readiness
+              port: httpprobe
+          resources:
+            {{- toYaml .Values.resources | nindent 12 }}
+      {{- with .Values.nodeSelector }}
+      nodeSelector:
+        {{- toYaml . | nindent 8 }}
+      {{- end }}
+    {{- with .Values.affinity }}
+      affinity:
+        {{- toYaml . | nindent 8 }}
+    {{- end }}
+    {{- with .Values.tolerations }}
+      tolerations:
+        {{- toYaml . | nindent 8 }}
+    {{- end }}

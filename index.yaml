@@ -409,6 +409,15 @@ entries:
   torrent-web-cache:
   - apiVersion: v1
     appVersion: "1.0"
+    created: "2021-05-20T22:55:39.983756+03:00"
+    description: Caching proxy for torrent content with S3-backend
+    digest: 9c4a52ab2b7dfd52e3f2d33dd3b211acf1ab6335f7080524a1a63932e95223d0
+    name: torrent-web-cache
+    urls:
+    - https://github.com/webtor-io/helm-charts/releases/download/torrent-web-cache-0.1.11/torrent-web-cache-0.1.11.tgz
+    version: 0.1.11
+  - apiVersion: v1
+    appVersion: "1.0"
     created: "2021-03-28T20:56:14.370544+03:00"
     description: Caching proxy for torrent content with S3-backend
     digest: 56a57918a6eef8e3821f22e0e02c36792198cb555aca5e2c59dc3acce76ba708
@@ -589,6 +598,16 @@ entries:
     name: video-thumbnails-generator
     urls:
     - https://github.com/webtor-io/helm-charts/releases/download/video-thumbnails-generator-0.1.0/video-thumbnails-generator-0.1.0.tgz
+    version: 0.1.0
+  webhook:
+  - apiVersion: v1
+    appVersion: "1.0"
+    created: "2021-05-20T22:55:42.986178+03:00"
+    description: Webhook Chart
+    digest: 110128a59751a5b54972437a7bafefb3f64a35f22b132b110a489598ad29d8ab
+    name: webhook
+    urls:
+    - https://github.com/webtor-io/helm-charts/releases/download/webhook-0.1.0/webhook-0.1.0.tgz
     version: 0.1.0
   webtor-web-blog:
   - apiVersion: v1
