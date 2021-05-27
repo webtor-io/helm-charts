@@ -1,0 +1,25 @@
+image:
+  repository: webtor/download-progress
+  tag: latest
+  pullPolicy: IfNotPresent
+
+nameOverride: ""
+fullnameOverride: ""
+
+service:
+  type: ClusterIP
+  ports: 
+    http: 80
+    grpc: 50051
+  topologyKeys: []
+
+update:
+  maxUnavailable: 1
+
+resources: {}
+
+nodeSelector: {}
+
+tolerations: []
+
+affinity: {}

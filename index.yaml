@@ -59,6 +59,16 @@ entries:
     urls:
     - https://github.com/webtor-io/helm-charts/releases/download/dnslb-0.1.0/dnslb-0.1.0.tgz
     version: 0.1.0
+  download-progress:
+  - apiVersion: v1
+    appVersion: "1.0"
+    created: "2021-05-27T23:33:38.532021+03:00"
+    description: Download Progress Chart
+    digest: 852c0946fe3dc57dd75ce1cb69f2571179c1ba3b3e3076cc2ba47c4f279b08b1
+    name: download-progress
+    urls:
+    - https://github.com/webtor-io/helm-charts/releases/download/download-progress-0.1.0/download-progress-0.1.0.tgz
+    version: 0.1.0
   external-proxy:
   - apiVersion: v1
     appVersion: "1.0"
