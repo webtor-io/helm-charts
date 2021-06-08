@@ -30,9 +30,15 @@ spec:
           livenessProbe:
             tcpSocket:
               port: grpc
+            initialDelaySeconds: 5
+            periodSeconds: 5
+            failureThreshold: 5
           readinessProbe:
             tcpSocket:
               port: grpc
+            initialDelaySeconds: 5
+            periodSeconds: 5
+            failureThreshold: 5
           resources:
             {{- toYaml .Values.resources | nindent 12 }}
       {{- with .Values.nodeSelector }}

@@ -418,6 +418,15 @@ entries:
   torrent-store:
   - apiVersion: v1
     appVersion: "1.0"
+    created: "2021-06-08T21:38:35.329633+03:00"
+    description: A Torrent Store Chart
+    digest: 955adb095bcf30ee96699adc74d0545bc23e25a6ddd5fea2d203f2d1373e8423
+    name: torrent-store
+    urls:
+    - https://github.com/webtor-io/helm-charts/releases/download/torrent-store-0.1.1/torrent-store-0.1.1.tgz
+    version: 0.1.1
+  - apiVersion: v1
+    appVersion: "1.0"
     created: "2019-12-17T02:41:34.824116+03:00"
     description: A Torrent Store Chart
     digest: 5d08c9f61a41d03a2960f673ded3a33fb878da07492624574209123f2dcd894a
