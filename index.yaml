@@ -273,6 +273,15 @@ entries:
   torrent-http-proxy:
   - apiVersion: v1
     appVersion: "1.0"
+    created: "2021-08-10T22:33:27.394475+03:00"
+    description: A Torrent HTTP Proxy Chart
+    digest: 108441364319eb0d382a15ec0202d4b009a5d673a6d3cf36334fe0a66611361c
+    name: torrent-http-proxy
+    urls:
+    - https://github.com/webtor-io/helm-charts/releases/download/torrent-http-proxy-0.1.16/torrent-http-proxy-0.1.16.tgz
+    version: 0.1.16
+  - apiVersion: v1
+    appVersion: "1.0"
     created: "2021-04-14T10:42:51.414425+03:00"
     description: A Torrent HTTP Proxy Chart
     digest: 1591d969c5c0240452363bcd23de13fc95857b2d225b2b35a13af9043ce04b53
@@ -570,6 +579,16 @@ entries:
     name: transcode-web-cache
     urls:
     - https://github.com/webtor-io/helm-charts/releases/download/transcode-web-cache-0.1.0/transcode-web-cache-0.1.0.tgz
+    version: 0.1.0
+  url-store:
+  - apiVersion: v1
+    appVersion: "1.0"
+    created: "2021-08-10T22:33:31.837036+03:00"
+    description: Url Store Chart
+    digest: 8d4718115f85a46a0ac81a149793746e2c12a01b4ea5884a506d64c19215fd8e
+    name: url-store
+    urls:
+    - https://github.com/webtor-io/helm-charts/releases/download/url-store-0.1.0/url-store-0.1.0.tgz
     version: 0.1.0
   video-info:
   - apiVersion: v1

@@ -7,17 +7,10 @@ nameOverride: ""
 fullnameOverride: ""
 
 secret: ""
+
 jobNodeAffinity:
   key: ""
   value: ""
-jobTranscoderNodeAffinity:
-  key: ""
-  value: ""
-jobSeederNodeAffinity:
-  key: ""
-  value: ""
-
-jobRequestAffinity: false
 
 promAddr: ""
 
@@ -50,6 +43,10 @@ seeder:
   cpu:
     requests: ""
     limits: ""
+  nodeAffintity:
+    key: ""
+    value: ""
+  requestAffintity: ""
 
 transcoder:
   image: webtor/content-transcoder:latest
@@ -57,6 +54,10 @@ transcoder:
   cpu:
     requests: ""
     limits: ""
+  nodeAffintity:
+    key: ""
+    value: ""
+  requestAffintity: ""
 
 snapshot:
   enabled: false

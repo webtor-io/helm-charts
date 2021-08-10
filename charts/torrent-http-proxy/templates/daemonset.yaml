@@ -44,16 +44,12 @@ spec:
               value: "{{ .Values.jobNodeAffinity.key }}"
             - name: JOB_NODE_AFFINITY_VALUE
               value: "{{ .Values.jobNodeAffinity.value }}"
-            - name: JOB_NODE_SEEDER_AFFINITY_KEY
-              value: "{{ .Values.jobSeederNodeAffinity.key }}"
-            - name: JOB_NODE_SEEDER_AFFINITY_VALUE
-              value: "{{ .Values.jobSeederNodeAffinity.value }}"
-            - name: JOB_NODE_TRANSCODER_AFFINITY_KEY
-              value: "{{ .Values.jobTranscoderNodeAffinity.key }}"
-            - name: JOB_NODE_TRANSCODER_AFFINITY_VALUE
-              value: "{{ .Values.jobTranscoderNodeAffinity.value }}"
-            - name: JOB_REQUEST_AFFINITY
-              value: "{{ .Values.jobRequestAffinity }}"
+            - name: SEEDER_AFFINITY_KEY
+              value: "{{ .Values.seeder.nodeAffinity.key }}"
+            - name: SEEDER_AFFINITY_VALUE
+              value: "{{ .Values.seeder.nodeAffinity.value }}"
+            - name: SEEDER_REQUEST_AFFINITY
+              value: "{{ .Values.seeder.requestAffinity }}"
             - name: SEEDER_IMAGE
               value: "{{ .Values.seeder.image }}"
             - name: SEEDER_CPU_REQUESTS
@@ -70,6 +66,12 @@ spec:
               value: "{{ .Values.transcoder.cpu.limits }}"
             - name: TRANSCODER_GRACE
               value: "{{ .Values.transcoder.grace }}"
+            - name: TRANSCODER_AFFINITY_KEY
+              value: "{{ .Values.transcoder.nodeAffinity.key }}"
+            - name: TRANSCODER_AFFINITY_VALUE
+              value: "{{ .Values.transcoder.nodeAffinity.value }}"
+            - name: TRANSCDOER_REQUEST_AFFINITY
+              value: "{{ .Values.transcoder.requestAffinity }}"
             - name: WEB_ORIGIN_HOST_REDIRECT
               value: "{{ .Values.redirect.enabled }}"
             - name: WEB_ORIGIN_HOST_REDIRECT_PREFIX
@@ -129,10 +131,16 @@ spec:
             httpGet:
               path: /liveness
               port: httpprobe
+            initialDelaySeconds: 5
+            periodSeconds: 5
+            failureThreshold: 5
           readinessProbe:
             httpGet:
               path: /readiness
               port: httpprobe
+            initialDelaySeconds: 5
+            periodSeconds: 5
+            failureThreshold: 5
           resources:
             {{- toYaml .Values.resources | nindent 12 }}
       {{- with .Values.nodeSelector }}

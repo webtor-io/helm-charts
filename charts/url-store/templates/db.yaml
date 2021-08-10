@@ -1,0 +1,36 @@
+kind: "postgresql"
+apiVersion: "acid.zalan.do/v1"
+metadata:
+  name: "acid-{{ include "url-store.fullname" . }}"
+  labels:
+    team: acid
+    app.kubernetes.io/name: {{ include "url-store.name" . }}
+    helm.sh/chart: {{ include "url-store.chart" . }}
+    app.kubernetes.io/instance: {{ .Release.Name }}
+    app.kubernetes.io/managed-by: {{ .Release.Service }}
+spec:
+  teamId: "acid"
+  postgresql:
+    version: "13"
+  numberOfInstances: {{ .Values.postgres.instances }}
+  enableMasterLoadBalancer: false
+  enableReplicaLoadBalancer: false
+  enableReplicaConnectionPooler: true
+  enableConnectionPooler: true
+  enableLogicalBackup: true
+  volume:
+    size: {{ .Values.postgres.volume.size }}
+  users:
+    {{ .Values.postgres.name }}: []
+  databases:
+    {{ .Values.postgres.name }}: {{ .Values.postgres.name }}
+  allowedSourceRanges:
+    # IP ranges to access your cluster go here
+{{- with .Values.postgres.nodeAffinity }}
+  nodeAffinity:
+    {{- toYaml . | nindent 4 }}
+{{- end }}
+  resources:
+{{- with .Values.postgres.resources }}
+    {{- toYaml . | nindent 4 }}
+{{- end }}

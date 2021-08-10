@@ -1,0 +1,38 @@
+replicaCount: 1
+
+image:
+  repository: webtor/url-store
+  tag: latest
+  pullPolicy: IfNotPresent
+
+nameOverride: ""
+fullnameOverride: ""
+
+resources: {}
+
+nodeSelector: {}
+
+tolerations: []
+
+affinity: {}
+
+service:
+  type: ClusterIP
+  ports: 
+    http: 80
+    grpc: 50051
+  topologyKeys: []
+
+postgres:
+  instances: 2
+  name: urlstore
+  volume:
+    size: "10Gi"
+  nodeAffinity: {}
+  resources:
+    requests:
+      cpu: 100m
+      memory: 100Mi
+    limits:
+      cpu: 500m
+      memory: 512Mi
