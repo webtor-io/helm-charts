@@ -69,7 +69,7 @@ releases:
 - name: torrent-http-proxy
   namespace: webtor
   chart: webtor/torrent-http-proxy
-  version: 0.1.16
+  version: 0.1.17
   values:
     - seeder:
         image: webtor/torrent-web-seeder:0.1.1
