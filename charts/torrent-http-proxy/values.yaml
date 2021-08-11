@@ -43,10 +43,10 @@ seeder:
   cpu:
     requests: ""
     limits: ""
-  nodeAffintity:
+  nodeAffinity:
     key: ""
     value: ""
-  requestAffintity: ""
+  requestAffinity: ""
 
 transcoder:
   image: webtor/content-transcoder:latest
@@ -54,10 +54,10 @@ transcoder:
   cpu:
     requests: ""
     limits: ""
-  nodeAffintity:
+  nodeAffinity:
     key: ""
     value: ""
-  requestAffintity: ""
+  requestAffinity: ""
 
 snapshot:
   enabled: false

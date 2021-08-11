@@ -273,6 +273,15 @@ entries:
   torrent-http-proxy:
   - apiVersion: v1
     appVersion: "1.0"
+    created: "2021-08-11T09:44:24.957384+03:00"
+    description: A Torrent HTTP Proxy Chart
+    digest: 261de69338bbd9f5e49892be7f84f1f74c55cbed5e6db83107ebf5528875e734
+    name: torrent-http-proxy
+    urls:
+    - https://github.com/webtor-io/helm-charts/releases/download/torrent-http-proxy-0.1.17/torrent-http-proxy-0.1.17.tgz
+    version: 0.1.17
+  - apiVersion: v1
+    appVersion: "1.0"
     created: "2021-08-10T22:33:27.394475+03:00"
     description: A Torrent HTTP Proxy Chart
     digest: 108441364319eb0d382a15ec0202d4b009a5d673a6d3cf36334fe0a66611361c
