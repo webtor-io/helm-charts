@@ -16,7 +16,7 @@ releases:
   version: 0.1.0
   values:
     - image:
-        tag: 0.1.0
+        tag: 0.1.1
 - name: magnet2torrent
   namespace: webtor
   chart: webtor/magnet2torrent
@@ -30,7 +30,7 @@ releases:
   version: 0.1.0
   values:
     - image:
-        tag: 0.1.0
+        tag: 0.1.1
 - name: video-info
   namespace: webtor
   chart: webtor/video-info
@@ -41,24 +41,24 @@ releases:
 - name: torrent-archiver
   namespace: webtor
   chart: webtor/torrent-archiver
-  version: 0.1.1
+  version: 0.1.2
   values:
     - image:
-        tag: 0.1.0
+        tag: 0.1.1
 - name: torrent-store
   namespace: webtor
   chart: webtor/torrent-store
-  version: 0.1.0
+  version: 0.1.1
   values:
     - image:
-        tag: 0.1.0
+        tag: 0.1.1
 - name: srt2vtt
   namespace: webtor
   chart: webtor/srt2vtt
   version: 0.1.0
   values:
     - image:
-        tag: 0.1.0
+        tag: 0.1.1
 - name: job-cleaner
   namespace: webtor
   chart: webtor/job-cleaner
@@ -69,14 +69,14 @@ releases:
 - name: torrent-http-proxy
   namespace: webtor
   chart: webtor/torrent-http-proxy
-  version: 0.1.15
+  version: 0.1.16
   values:
     - seeder:
-        image: webtor/torrent-web-seeder:0.1.0
+        image: webtor/torrent-web-seeder:0.1.1
     - transcoder:
-        image: webtor/content-transcoder:0.1.0
+        image: webtor/content-transcoder:0.1.1
     - service:
         type: NodePort
         port: 8080
     - image:
-        tag: 0.1.0
+        tag: 0.1.1
