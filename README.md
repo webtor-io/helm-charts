@@ -112,3 +112,26 @@ For update do next three things:
  helm repo update
  helmfile apply
  ```
+## Secure your API
+
+Just put additional file called `clients.yaml` in the same dirctory where your `helmfile.yaml` located with the following content:
+
+```
+clients:
+  - name: client1
+    apiKey: client1-api-key
+    secret: client1-secret
+```
+
+Also make sure that you have the latest version of `helmfile.yaml`
+
+And do `sudo helmfile --helm-binary=microk8s.helm apply` to apply changes.
+
+After this, all requests to the API will require auth-token. It is simple [JWT-token](https://jwt.io/).
+Also it is possible to pass additional params in token payload such as:
+1. rate - this will do rate limitting (could be '1M', '10M' and so on, bits per second)
+2. agent - User-Agent
+3. remoteAddress - remote IP-address
+4. sessionID - some generated session ID, it should be provided for more precise rate-limitting
+
+If `agent` and `remoteAddress` are defined there will be additional check to prevent user from url-sharing.
