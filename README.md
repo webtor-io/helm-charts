@@ -114,7 +114,7 @@ For update do next three things:
  ```
 ## Secure your API
 
-Just put additional file called `clients.yaml` in the same dirctory where your `helmfile.yaml` located with the following content:
+Just put additional file called `clients.yaml` in the same directory where your `helmfile.yaml` located with the following content:
 
 ```
 clients:
@@ -123,7 +123,9 @@ clients:
     secret: client1-secret
 ```
 
-Also make sure that you have the latest version of `helmfile.yaml`
+**Don't forget to change values of name, apiKey and secret.**
+
+Also make sure that you have the latest version of `helmfile.yaml`.
 
 And do `sudo helmfile --helm-binary=microk8s.helm apply` to apply changes.
 
