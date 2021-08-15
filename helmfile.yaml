@@ -70,7 +70,9 @@ releases:
   namespace: webtor
   chart: webtor/torrent-http-proxy
   version: 0.1.17
+  missingFileHandler: Warn
   values:
+    - clients.yaml
     - seeder:
         image: webtor/torrent-web-seeder:0.1.1
     - transcoder:
