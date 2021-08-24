@@ -114,6 +114,12 @@ spec:
               value: "{{ .Values.node.bandwidth.low }}"
             - name: NODE_NETWORK_IFACE
               value: "{{ .Values.node.network.iface }}"
+            - name: CLICKHOUSE_DSN
+              value: "{{ .Values.clickHouse.dsn }}"
+            - name: CLICKHOUSE_REPLICATED
+              value: "{{ .Values.clickHouse.replicated }}"
+            - name: CLICKHOUSE_BATCH_SIZE
+              value: "{{ .Values.clickHouse.batchSize }}"
           ports:
             - name: http
               containerPort: 8080

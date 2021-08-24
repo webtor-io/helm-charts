@@ -37,6 +37,11 @@ redirect:
   prefix: "abra--"
   addressType: "ExternalIP"
 
+clickHouse:
+  dsn: ""
+  batchSize: 1000
+  replicated: false
+
 seeder:
   image: webtor/torrent-web-seeder:latest
   grace: 600
