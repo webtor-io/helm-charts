@@ -62,14 +62,14 @@ releases:
 - name: job-cleaner
   namespace: webtor
   chart: webtor/job-cleaner
-  version: 0.1.1
+  version: 0.1.2
   values:
     - image:
         tag: 0.1.0
 - name: torrent-http-proxy
   namespace: webtor
   chart: webtor/torrent-http-proxy
-  version: 0.1.19
+  version: 0.1.20
   missingFileHandler: Warn
   values:
     - clients.yaml

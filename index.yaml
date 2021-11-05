@@ -3,6 +3,15 @@ entries:
   abuse-fetcher:
   - apiVersion: v1
     appVersion: "1.0"
+    created: "2021-11-05T14:08:48.863856+03:00"
+    description: A Helm chart for Abuse Fetcher
+    digest: 7213d18d77a41791192e247226d233a57d2aecfaf0f9139afa81e7ab1070377c
+    name: abuse-fetcher
+    urls:
+    - https://github.com/webtor-io/helm-charts/releases/download/abuse-fetcher-0.1.1/abuse-fetcher-0.1.1.tgz
+    version: 0.1.1
+  - apiVersion: v1
+    appVersion: "1.0"
     created: "2020-10-03T14:25:55.98208+03:00"
     description: A Helm chart for Abuse Fetcher
     digest: 025a2368e936e6ba7c211e5cd5a1e483de03b374a858b60c9586440f0cd795f7
@@ -21,6 +30,15 @@ entries:
     - https://github.com/webtor-io/helm-charts/releases/download/abuse-store-0.1.0/abuse-store-0.1.0.tgz
     version: 0.1.0
   balancer-excluder:
+  - apiVersion: v1
+    appVersion: "1.0"
+    created: "2021-11-05T14:08:49.517092+03:00"
+    description: A Helm chart for Balancer Excluder
+    digest: 571953b81ced6c3085b8b3cffdd360d11e8b9e6c7c91179605a509f2d6da1e3c
+    name: balancer-excluder
+    urls:
+    - https://github.com/webtor-io/helm-charts/releases/download/balancer-excluder-0.1.1/balancer-excluder-0.1.1.tgz
+    version: 0.1.1
   - apiVersion: v1
     appVersion: "1.0"
     created: "2020-03-09T21:39:43.208987+03:00"
@@ -121,6 +139,15 @@ entries:
   job-cleaner:
   - apiVersion: v1
     appVersion: "1.0"
+    created: "2021-11-05T14:08:52.064295+03:00"
+    description: A Helm chart for Job Cleaner
+    digest: ec8f1953762a907da48be29b35fe8d4d07fd189bca0814feb879e34fc150ccbf
+    name: job-cleaner
+    urls:
+    - https://github.com/webtor-io/helm-charts/releases/download/job-cleaner-0.1.2/job-cleaner-0.1.2.tgz
+    version: 0.1.2
+  - apiVersion: v1
+    appVersion: "1.0"
     created: "2021-11-05T13:59:30.906565+03:00"
     description: A Helm chart for Job Cleaner
     digest: b9b7d93dbb0c9ca146c1bb90e96a5f69592ae7e22cd5ef05bc82d82b2e7f3c1c
@@ -197,6 +224,15 @@ entries:
     - https://github.com/webtor-io/helm-charts/releases/download/nginx-vod-0.1.0/nginx-vod-0.1.0.tgz
     version: 0.1.0
   node-dns-syncer:
+  - apiVersion: v1
+    appVersion: "1.0"
+    created: "2021-11-05T14:08:53.840173+03:00"
+    description: A Helm chart for Node DNS Syncer
+    digest: 87e5730914164fe07be4aa2156c82384a92bc4075c8317cc147365e4437b89a2
+    name: node-dns-syncer
+    urls:
+    - https://github.com/webtor-io/helm-charts/releases/download/node-dns-syncer-0.1.2/node-dns-syncer-0.1.2.tgz
+    version: 0.1.2
   - apiVersion: v1
     appVersion: "1.0"
     created: "2020-10-03T14:25:58.492719+03:00"
@@ -300,6 +336,15 @@ entries:
     - https://github.com/webtor-io/helm-charts/releases/download/torrent-cache-cleaner-0.1.0/torrent-cache-cleaner-0.1.0.tgz
     version: 0.1.0
   torrent-http-proxy:
+  - apiVersion: v1
+    appVersion: "1.0"
+    created: "2021-11-05T14:08:58.924617+03:00"
+    description: A Torrent HTTP Proxy Chart
+    digest: 9caab7dc36f7eb31461e4ca7d4f870016e9997e4e940fbd37285c16524760f31
+    name: torrent-http-proxy
+    urls:
+    - https://github.com/webtor-io/helm-charts/releases/download/torrent-http-proxy-0.1.20/torrent-http-proxy-0.1.20.tgz
+    version: 0.1.20
   - apiVersion: v1
     appVersion: "1.0"
     created: "2021-11-05T13:59:36.527419+03:00"
