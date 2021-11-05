@@ -15,6 +15,7 @@ config: {}
 service:
   type: ClusterIP
   port: 80
+  topologyKeys: []
 
 ingress:
   enabled: true

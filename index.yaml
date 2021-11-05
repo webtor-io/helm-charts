@@ -30,6 +30,16 @@ entries:
     urls:
     - https://github.com/webtor-io/helm-charts/releases/download/balancer-excluder-0.1.0/balancer-excluder-0.1.0.tgz
     version: 0.1.0
+  content-enhancer:
+  - apiVersion: v1
+    appVersion: "1.0"
+    created: "2021-11-05T13:59:28.74617+03:00"
+    description: A Helm chart for Content Enhancer
+    digest: f872744b1cd6243213bd7a04919ac9cd3c490959d9c55f149ed95f4fcfb2ee1d
+    name: content-enhancer
+    urls:
+    - https://github.com/webtor-io/helm-charts/releases/download/content-enhancer-0.1.0/content-enhancer-0.1.0.tgz
+    version: 0.1.0
   content-prober:
   - apiVersion: v1
     appVersion: "1.0"
@@ -111,12 +121,31 @@ entries:
   job-cleaner:
   - apiVersion: v1
     appVersion: "1.0"
+    created: "2021-11-05T13:59:30.906565+03:00"
+    description: A Helm chart for Job Cleaner
+    digest: b9b7d93dbb0c9ca146c1bb90e96a5f69592ae7e22cd5ef05bc82d82b2e7f3c1c
+    name: job-cleaner
+    urls:
+    - https://github.com/webtor-io/helm-charts/releases/download/job-cleaner-0.1.1/job-cleaner-0.1.1.tgz
+    version: 0.1.1
+  - apiVersion: v1
+    appVersion: "1.0"
     created: "2020-03-10T00:55:35.787365+03:00"
     description: A Helm chart for Job Cleaner
     digest: bb5e3e35dc3d56f10bb4b3e5858a179ae5d4a683981a5370133dc038b03899ef
     name: job-cleaner
     urls:
     - https://github.com/webtor-io/helm-charts/releases/download/job-cleaner-0.1.0/job-cleaner-0.1.0.tgz
+    version: 0.1.0
+  job-pooler:
+  - apiVersion: v1
+    appVersion: "1.0"
+    created: "2021-11-05T13:59:31.131094+03:00"
+    description: Job Pooler Chart
+    digest: abf78ddcf5b529287b4e09c440e00ebaa858d32237b0782abcd18acbf5290aee
+    name: job-pooler
+    urls:
+    - https://github.com/webtor-io/helm-charts/releases/download/job-pooler-0.1.0/job-pooler-0.1.0.tgz
     version: 0.1.0
   magnet2torrent:
   - apiVersion: v1
@@ -271,6 +300,15 @@ entries:
     - https://github.com/webtor-io/helm-charts/releases/download/torrent-cache-cleaner-0.1.0/torrent-cache-cleaner-0.1.0.tgz
     version: 0.1.0
   torrent-http-proxy:
+  - apiVersion: v1
+    appVersion: "1.0"
+    created: "2021-11-05T13:59:36.527419+03:00"
+    description: A Torrent HTTP Proxy Chart
+    digest: efb8874ed32972f4ff881ae9375e92a3cb0468e9b3edf5c419b8cd6987f40642
+    name: torrent-http-proxy
+    urls:
+    - https://github.com/webtor-io/helm-charts/releases/download/torrent-http-proxy-0.1.19/torrent-http-proxy-0.1.19.tgz
+    version: 0.1.19
   - apiVersion: v1
     appVersion: "1.0"
     created: "2021-08-24T19:52:46.838194+03:00"
@@ -582,6 +620,15 @@ entries:
   transcode-web-cache:
   - apiVersion: v1
     appVersion: "1.0"
+    created: "2021-11-05T13:59:41.153039+03:00"
+    description: Caching proxy for transcoded content with S3-backend
+    digest: 84e45104100f7088aef41845b1a82d821625017599f69d4f9ee0ac5f8ac22a0f
+    name: transcode-web-cache
+    urls:
+    - https://github.com/webtor-io/helm-charts/releases/download/transcode-web-cache-0.1.2/transcode-web-cache-0.1.2.tgz
+    version: 0.1.2
+  - apiVersion: v1
+    appVersion: "1.0"
     created: "2021-03-13T13:54:14.513349+03:00"
     description: Caching proxy for transcoded content with S3-backend
     digest: 8ef415282fa2a1febde1537ffa23c6a8c3091b82e78ae84bd1e9933a0ca22e39
@@ -703,6 +750,15 @@ entries:
     - https://github.com/webtor-io/helm-charts/releases/download/webtor-web-blog-0.1.0/webtor-web-blog-0.1.0.tgz
     version: 0.1.0
   webtor-web-ui:
+  - apiVersion: v1
+    appVersion: "1.0"
+    created: "2021-11-05T13:59:43.804101+03:00"
+    description: Webtor Web UI Chart
+    digest: a46f3ec5fdd9f81c3faff8ef2012efc3e61d14bcd372d1ff0757fbcb2e598089
+    name: webtor-web-ui
+    urls:
+    - https://github.com/webtor-io/helm-charts/releases/download/webtor-web-ui-0.1.3/webtor-web-ui-0.1.3.tgz
+    version: 0.1.3
   - apiVersion: v1
     appVersion: "1.0"
     created: "2021-04-25T11:35:20.941186+03:00"

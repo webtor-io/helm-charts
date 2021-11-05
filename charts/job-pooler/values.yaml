@@ -1,0 +1,43 @@
+replicaCount: 1
+
+image:
+  repository: webtor/job-pooler
+  tag: latest
+  pullPolicy: IfNotPresent
+
+nameOverride: ""
+fullnameOverride: ""
+
+resources: {}
+
+nodeSelector: {}
+
+tolerations: []
+
+affinity: {}
+
+service:
+  type: ClusterIP
+  name: job-pooler
+  ports: 
+    http: 80
+  topologyKeys: []
+
+job: {
+  concurrency: "10",
+  expire: "600",
+  errorExpire: "30",
+  initExpire: "900",
+  capacity: "1000",
+  timeout: "10800",
+  checkIntervals: {
+    done: "30",
+    error: "30",
+  },
+  paths: {
+    doneMarker: "/done",
+    errorMarker: "/error",
+    invoke: "/touch",
+    errorLog: "/error.log"
+  }
+}

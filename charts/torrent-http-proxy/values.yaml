@@ -48,15 +48,29 @@ seeder:
   cpu:
     requests: ""
     limits: ""
+  memory:
+    requests: ""
+    limits: ""
   nodeAffinity:
     key: ""
     value: ""
   requestAffinity: ""
 
+mbTranscoder:
+  cpu:
+    requests: ""
+    limits: ""
+  memory:
+    requests: ""
+    limits: ""
+
 transcoder:
   image: webtor/content-transcoder:latest
   grace: 600
   cpu:
+    requests: ""
+    limits: ""
+  memory:
     requests: ""
     limits: ""
   nodeAffinity:

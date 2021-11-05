@@ -18,6 +18,11 @@ aws:
   region: ""
   noSSL: ""
 
+persistence:
+  enabled: true
+  hostPath: /var/torrent-web-cache
+  type: DirectoryOrCreate
+
 service:
   type: ClusterIP
   port: 80

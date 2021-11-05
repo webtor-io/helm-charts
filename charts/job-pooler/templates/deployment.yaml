@@ -1,0 +1,84 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: {{ include "job-pooler.fullname" . }}
+  labels:
+    app.kubernetes.io/name: {{ include "job-pooler.name" . }}
+    helm.sh/chart: {{ include "job-pooler.chart" . }}
+    app.kubernetes.io/instance: {{ .Release.Name }}
+    app.kubernetes.io/managed-by: {{ .Release.Service }}
+spec:
+  replicas: {{ .Values.replicaCount }}
+  selector:
+    matchLabels:
+      app.kubernetes.io/name: {{ include "job-pooler.name" . }}
+      app.kubernetes.io/instance: {{ .Release.Name }}
+  template:
+    metadata:
+      labels:
+        app.kubernetes.io/name: {{ include "job-pooler.name" . }}
+        app.kubernetes.io/instance: {{ .Release.Name }}
+    spec:
+      containers:
+        - name: {{ .Chart.Name }}
+          image: "{{ .Values.image.repository }}:{{ .Values.image.tag }}"
+          imagePullPolicy: {{ .Values.image.pullPolicy }}
+          env:
+            - name: JOB_CONCURRENCY
+              value: "{{ .Values.job.concurrency }}"
+            - name: JOB_EXPIRE
+              value: "{{ .Values.job.expire }}"
+            - name: JOB_ERROR_EXPIRE
+              value: "{{ .Values.job.errorExpire }}"
+            - name: JOB_INIT_EXPIRE
+              value: "{{ .Values.job.initExpire }}"
+            - name: JOB_EXPIRE
+              value: "{{ .Values.job.expire }}"
+            - name: JOB_CAPACITY
+              value: "{{ .Values.job.capacity }}"
+            - name: JOB_TIMEOUT
+              value: "{{ .Values.job.timeout }}"
+            - name: JOB_DONE_CHECK_INTERVAL
+              value: "{{ .Values.job.checkIntervals.done }}"
+            - name: JOB_ERROR_CHECK_INTERVAL
+              value: "{{ .Values.job.checkIntervals.error }}"
+            - name: JOB_DONE_MARKER_PATH
+              value: "{{ .Values.job.paths.doneMarker }}"
+            - name: JOB_ERROR_MARKER_PATH
+              value: "{{ .Values.job.paths.errorMarker }}"
+            - name: JOB_ERROR_LOG_PATH
+              value: "{{ .Values.job.paths.errorLog }}"
+            - name: JOB_INVOKE_PATH
+              value: "{{ .Values.job.paths.invoke }}"
+          ports:
+            - name: http
+              containerPort: 8080
+              protocol: TCP
+            - name: httpprobe
+              containerPort: 8081
+              protocol: TCP
+            - name: grpc
+              containerPort: 50051
+              protocol: TCP
+          livenessProbe:
+            httpGet:
+              path: /liveness
+              port: httpprobe
+          readinessProbe:
+            httpGet:
+              path: /readiness
+              port: httpprobe
+          resources:
+            {{- toYaml .Values.resources | nindent 12 }}
+      {{- with .Values.nodeSelector }}
+      nodeSelector:
+        {{- toYaml . | nindent 8 }}
+      {{- end }}
+    {{- with .Values.affinity }}
+      affinity:
+        {{- toYaml . | nindent 8 }}
+    {{- end }}
+    {{- with .Values.tolerations }}
+      tolerations:
+        {{- toYaml . | nindent 8 }}
+    {{- end }}

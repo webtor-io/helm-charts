@@ -55,6 +55,9 @@ spec:
             httpGet:
               path: /readiness
               port: httpprobe
+          volumeMounts:
+          - name: cache
+            mountPath: /cache
           resources:
             {{- toYaml .Values.resources | nindent 12 }}
       {{- with .Values.nodeSelector }}
@@ -69,3 +72,12 @@ spec:
       tolerations:
         {{- toYaml . | nindent 8 }}
     {{- end }}
+      volumes:
+      - name: cache
+      {{- if .Values.persistence.enabled }}
+        hostPath:
+          path: "{{ .Values.persistence.hostPath }}"
+          type: "{{ .Values.persistence.type }}"
+      {{- else }}
+        emptyDir: {}
+      {{- end -}}

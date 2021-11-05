@@ -56,6 +56,10 @@ spec:
               value: "{{ .Values.seeder.cpu.requests }}"
             - name: SEEDER_CPU_LIMITS
               value: "{{ .Values.seeder.cpu.limits }}"
+            - name: SEEDER_MEMORY_REQUESTS
+              value: "{{ .Values.seeder.memory.requests }}"
+            - name: SEEDER_MEMORY_LIMITS
+              value: "{{ .Values.seeder.memory.limits }}"
             - name: SEEDER_GRACE
               value: "{{ .Values.seeder.grace }}"
             - name: TRANSCODER_IMAGE
@@ -64,6 +68,18 @@ spec:
               value: "{{ .Values.transcoder.cpu.requests }}"
             - name: TRANSCODER_CPU_LIMITS
               value: "{{ .Values.transcoder.cpu.limits }}"
+            - name: TRANSCODER_MEMORY_REQUESTS
+              value: "{{ .Values.transcoder.memory.requests }}"
+            - name: TRANSCODER_MEMORY_LIMITS
+              value: "{{ .Values.transcoder.memory.limits }}"
+            - name: MB_TRANSCODER_CPU_REQUESTS
+              value: "{{ .Values.mbTranscoder.cpu.requests }}"
+            - name: MB_TRANSCODER_CPU_LIMITS
+              value: "{{ .Values.mbTranscoder.cpu.limits }}"
+            - name: MB_TRANSCODER_MEMORY_REQUESTS
+              value: "{{ .Values.mbTranscoder.memory.requests }}"
+            - name: MB_TRANSCODER_MEMORY_LIMITS
+              value: "{{ .Values.mbTranscoder.memory.limits }}"
             - name: TRANSCODER_GRACE
               value: "{{ .Values.transcoder.grace }}"
             - name: TRANSCODER_AFFINITY_KEY
