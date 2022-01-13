@@ -23,22 +23,43 @@ spec:
         - name: {{ .Chart.Name }}
           image: "{{ .Values.image.repository }}:{{ .Values.image.tag }}"
           imagePullPolicy: {{ .Values.image.pullPolicy }}
+          env:
+            - name: USE_REDIS
+              value: "{{ .Values.redis.enabled }}"
+            - name: USE_ABUSE
+              value: "{{ .Values.abuse.enabled }}"
+            - name: USE_S3
+              value: "{{ .Values.aws.enabled }}"
+            - name: AWS_ACCESS_KEY_ID
+              value: "{{ .Values.aws.accessKeyId }}"
+            - name: AWS_SECRET_ACCESS_KEY
+              value: "{{ .Values.aws.secretAccessKey }}"
+            - name: AWS_BUCKET
+              value: "{{ .Values.aws.bucket }}"
+            - name: AWS_ENDPOINT
+              value: "{{ .Values.aws.endpoint }}"
+            - name: AWS_REGION
+              value: "{{ .Values.aws.region }}"
+            - name: AWS_NO_SSL
+              value: "{{ .Values.aws.noSSL }}"
           ports:
+            - name: httpprobe
+              containerPort: 8081
+              protocol: TCP
+            - name: httppprof
+              containerPort: 8082
+              protocol: TCP
             - name: grpc
               containerPort: 50051
               protocol: TCP
           livenessProbe:
-            tcpSocket:
-              port: grpc
-            initialDelaySeconds: 5
-            periodSeconds: 5
-            failureThreshold: 5
+            httpGet:
+              path: /liveness
+              port: httpprobe
           readinessProbe:
-            tcpSocket:
-              port: grpc
-            initialDelaySeconds: 5
-            periodSeconds: 5
-            failureThreshold: 5
+            httpGet:
+              path: /readiness
+              port: httpprobe
           resources:
             {{- toYaml .Values.resources | nindent 12 }}
       {{- with .Values.nodeSelector }}

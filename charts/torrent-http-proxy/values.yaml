@@ -8,6 +8,8 @@ fullnameOverride: ""
 
 secret: ""
 
+useBandwidthLimit: false
+
 jobNodeAffinity:
   key: ""
   value: ""
@@ -63,6 +65,9 @@ mbTranscoder:
   memory:
     requests: ""
     limits: ""
+  nodeAffinity:
+    key: ""
+    value: ""
 
 transcoder:
   image: webtor/content-transcoder:latest

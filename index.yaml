@@ -251,6 +251,26 @@ entries:
     urls:
     - https://github.com/webtor-io/helm-charts/releases/download/node-dns-syncer-0.1.0/node-dns-syncer-0.1.0.tgz
     version: 0.1.0
+  node-manager:
+  - apiVersion: v1
+    appVersion: "1.0"
+    created: "2022-01-13T13:15:11.741931+03:00"
+    description: Heals nodes
+    digest: 5e1694ec60b58aadfad02afad8928abdc73d620844b0174cc1d646c90833fa47
+    name: node-manager
+    urls:
+    - https://github.com/webtor-io/helm-charts/releases/download/node-manager-0.1.0/node-manager-0.1.0.tgz
+    version: 0.1.0
+  retry-proxy:
+  - apiVersion: v1
+    appVersion: "1.0"
+    created: "2022-01-13T13:15:11.951931+03:00"
+    description: Retry Proxy Chart
+    digest: ed8705c2b4971605579f883c4390a54b27bb3645dbbc37825bdd4ab7aed2bd57
+    name: retry-proxy
+    urls:
+    - https://github.com/webtor-io/helm-charts/releases/download/retry-proxy-0.1.0/retry-proxy-0.1.0.tgz
+    version: 0.1.0
   srt2vtt:
   - apiVersion: v1
     appVersion: "1.0"
@@ -336,6 +356,15 @@ entries:
     - https://github.com/webtor-io/helm-charts/releases/download/torrent-cache-cleaner-0.1.0/torrent-cache-cleaner-0.1.0.tgz
     version: 0.1.0
   torrent-http-proxy:
+  - apiVersion: v1
+    appVersion: "1.0"
+    created: "2022-01-13T13:15:17.056902+03:00"
+    description: A Torrent HTTP Proxy Chart
+    digest: 7c8197f011bc2273b61784cdddf493c78b8076024816768bb2aaaaa68d37b4ed
+    name: torrent-http-proxy
+    urls:
+    - https://github.com/webtor-io/helm-charts/releases/download/torrent-http-proxy-0.1.21/torrent-http-proxy-0.1.21.tgz
+    version: 0.1.21
   - apiVersion: v1
     appVersion: "1.0"
     created: "2021-11-05T14:08:58.924617+03:00"
@@ -526,6 +555,15 @@ entries:
     - https://github.com/webtor-io/helm-charts/releases/download/torrent-http-proxy-0.1.0/torrent-http-proxy-0.1.0.tgz
     version: 0.1.0
   torrent-store:
+  - apiVersion: v1
+    appVersion: "1.0"
+    created: "2022-01-13T13:15:19.182694+03:00"
+    description: A Torrent Store Chart
+    digest: ac0cc01cbda020a37d9996705fc3b36716f3764a0a6b3b8e3127f3d644164266
+    name: torrent-store
+    urls:
+    - https://github.com/webtor-io/helm-charts/releases/download/torrent-store-0.1.2/torrent-store-0.1.2.tgz
+    version: 0.1.2
   - apiVersion: v1
     appVersion: "1.0"
     created: "2021-06-08T21:38:35.329633+03:00"

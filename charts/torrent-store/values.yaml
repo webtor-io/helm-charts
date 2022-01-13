@@ -8,6 +8,20 @@ image:
 nameOverride: ""
 fullnameOverride: ""
 
+aws:
+  enabled: "false"
+  accessKeyId: ""
+  secretAccessKey: ""
+  bucket: ""
+  endpoint: ""
+  region: ""
+  noSSL: ""
+
+redis:
+  enabled: "false"
+
+abuse:
+  enabled: "false"
 
 resources: {}
 

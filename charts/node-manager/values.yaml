@@ -1,0 +1,25 @@
+image:
+  repository: webtor/node-manager
+  tag: latest
+  pullPolicy: IfNotPresent
+
+nameOverride: ""
+fullnameOverride: ""
+schedule: "*/5 * * * *"
+
+resources: {}
+
+nodeSelector: {}
+
+tolerations: []
+
+affinity: {}
+
+rbac:
+  create: true
+
+contabo:
+  clientId: ""
+  clientSecret: ""
+  apiUser: ""
+  apiSecret: ""

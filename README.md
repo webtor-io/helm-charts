@@ -22,7 +22,7 @@ To update webtor components to the latest stable versions just use the following
 curl https://raw.githubusercontent.com/webtor-io/helm-charts/master/scripts/update-webtor.sh | sh
 ```
 
-## Long way
+## Long way [DEPRECATED]
 
 Let's start:
 

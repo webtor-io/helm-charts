@@ -1,0 +1,25 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: {{ include "retry-proxy.fullname" . }}
+  labels:
+    app.kubernetes.io/name: {{ include "retry-proxy.name" . }}
+    helm.sh/chart: {{ include "retry-proxy.chart" . }}
+    app.kubernetes.io/instance: {{ .Release.Name }}
+    app.kubernetes.io/managed-by: {{ .Release.Service }}
+spec:
+  type: {{ .Values.service.type }}
+  ports:
+    - port: {{ .Values.service.port }}
+      targetPort: http
+      protocol: TCP
+      name: http
+{{- if .Values.service.topologyKeys }}
+  topologyKeys:
+  {{- range .Values.service.topologyKeys }}
+    - {{ . | quote }}
+  {{- end }}
+{{- end }}
+  selector:
+    app.kubernetes.io/name: {{ include "retry-proxy.name" . }}
+    app.kubernetes.io/instance: {{ .Release.Name }}

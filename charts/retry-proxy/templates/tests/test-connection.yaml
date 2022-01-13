@@ -1,0 +1,18 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: "{{ include "retry-proxy.fullname" . }}-test-connection"
+  labels:
+    app.kubernetes.io/name: {{ include "retry-proxy.name" . }}
+    helm.sh/chart: {{ include "retry-proxy.chart" . }}
+    app.kubernetes.io/instance: {{ .Release.Name }}
+    app.kubernetes.io/managed-by: {{ .Release.Service }}
+  annotations:
+    "helm.sh/hook": test-success
+spec:
+  containers:
+    - name: wget
+      image: busybox
+      command: ['wget']
+      args:  ['{{ include "retry-proxy.fullname" . }}:{{ .Values.service.port }}']
+  restartPolicy: Never

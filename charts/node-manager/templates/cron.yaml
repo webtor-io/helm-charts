@@ -1,0 +1,36 @@
+apiVersion: batch/v1beta1
+kind: CronJob
+metadata:
+  name: "{{ include "node-manager.fullname" . }}"
+  labels:
+    app.kubernetes.io/name: {{ include "node-manager.name" . }}
+    helm.sh/chart: {{ include "node-manager.chart" . }}
+    app.kubernetes.io/instance: {{ .Release.Name }}
+    app.kubernetes.io/managed-by: {{ .Release.Service }}
+spec:
+  schedule: "{{ .Values.schedule }}"
+  concurrencyPolicy: Forbid
+  startingDeadlineSeconds: 10
+  jobTemplate:
+    spec:
+      template:
+        spec:
+          containers:
+          - name: "{{ .Chart.Name }}"
+            image: "{{ .Values.image.repository }}:{{ .Values.image.tag }}"
+            imagePullPolicy: {{ .Values.image.pullPolicy }}
+            env:
+              - name: CONTABO_CLIENT_ID
+                value: "{{ .Values.contabo.clientId }}"
+              - name: CONTABO_CLIENT_SECRET
+                value: "{{ .Values.contabo.clientSecret }}"
+              - name: CONTABO_API_USER
+                value: "{{ .Values.contabo.apiUser }}"
+              - name: CONTABO_API_PASSWORD
+                value: "{{ .Values.contabo.apiPassword }}"
+          restartPolicy: Never
+        {{- with .Values.affinity }}
+          affinity:
+            {{- toYaml . | nindent 12 }}
+        {{- end }}
+      backoffLimit: 0

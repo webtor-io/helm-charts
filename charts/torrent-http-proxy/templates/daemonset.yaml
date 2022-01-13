@@ -88,6 +88,10 @@ spec:
               value: "{{ .Values.transcoder.nodeAffinity.value }}"
             - name: TRANSCDOER_REQUEST_AFFINITY
               value: "{{ .Values.transcoder.requestAffinity }}"
+            - name: MB_TRANSCODER_AFFINITY_KEY
+              value: "{{ .Values.mbTranscoder.nodeAffinity.key }}"
+            - name: MB_TRANSCODER_AFFINITY_VALUE
+              value: "{{ .Values.mbTranscoder.nodeAffinity.value }}"
             - name: WEB_ORIGIN_HOST_REDIRECT
               value: "{{ .Values.redirect.enabled }}"
             - name: WEB_ORIGIN_HOST_REDIRECT_PREFIX
@@ -136,6 +140,8 @@ spec:
               value: "{{ .Values.clickHouse.replicated }}"
             - name: CLICKHOUSE_BATCH_SIZE
               value: "{{ .Values.clickHouse.batchSize }}"
+            - name: USE_BANDWIDTH_LIMIT
+              value: "{{ .Values.useBandwidthLimit }}"
           ports:
             - name: http
               containerPort: 8080
