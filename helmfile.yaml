@@ -1,4 +1,15 @@
 releases:
+- name: redis
+  namespace: webtor
+  chart: bitnami/redis
+  version: 9.5.0
+  values:
+    - usePassword: false
+    - cluster:
+        enabled: false
+    - master:
+        persistence:
+          enabled: false
 - name: content-prober
   namespace: webtor
   chart: webtor/content-prober
@@ -41,6 +52,8 @@ releases:
   values:
     - image:
         tag: 0.1.2
+    - redis:
+        enabled: true
 - name: srt2vtt
   namespace: webtor
   chart: webtor/srt2vtt
