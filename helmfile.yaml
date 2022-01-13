@@ -58,7 +58,7 @@ releases:
 - name: torrent-http-proxy
   namespace: webtor
   chart: webtor/torrent-http-proxy
-  version: 0.1.21
+  version: 0.1.22
   missingFileHandler: Warn
   values:
     - clients.yaml
@@ -68,6 +68,5 @@ releases:
         image: webtor/content-transcoder:0.1.2
     - service:
         type: NodePort
-        port: 8080
     - image:
         tag: 0.1.2

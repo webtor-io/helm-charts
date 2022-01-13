@@ -14,10 +14,12 @@ spec:
       targetPort: http
       protocol: TCP
       name: http
+      nodePort: 30180
     - port: {{ .Values.service.ports.grpc }}
       targetPort: grpc
       protocol: TCP
       name: grpc
+      nodePort: 30151
     - port: {{ .Values.service.ports.httpprom }}
       targetPort: httpprom
       protocol: TCP
