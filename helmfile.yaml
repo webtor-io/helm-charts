@@ -74,7 +74,7 @@ releases:
   version: 0.1.7
   values:
     - image:
-        tag: d39e565d5041d86639e7da41fc82140d1667b440
+        tag: 05218b23fb2ccc2da9f1e3e147cf75bbc20dc89b
     - service:
         type: NodePort
 - name: torrent-http-proxy
