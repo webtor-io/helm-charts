@@ -511,6 +511,15 @@ entries:
   torrent-http-proxy:
   - apiVersion: v1
     appVersion: "1.0"
+    created: "2022-04-16T14:23:01.163962+03:00"
+    description: A Torrent HTTP Proxy Chart
+    digest: b843114572ee294b38de7651316fd5764fd90cb98462ac8c6077c0e9cadd2e81
+    name: torrent-http-proxy
+    urls:
+    - https://github.com/webtor-io/helm-charts/releases/download/torrent-http-proxy-0.1.25/torrent-http-proxy-0.1.25.tgz
+    version: 0.1.25
+  - apiVersion: v1
+    appVersion: "1.0"
     created: "2022-04-16T13:14:21.645127+03:00"
     description: A Torrent HTTP Proxy Chart
     digest: fb87be07a2dac2353083b8620bebceb0f8d30878fd9c4c0e231582ace32e6ff7
@@ -1067,6 +1076,15 @@ entries:
     - https://github.com/webtor-io/helm-charts/releases/download/webtor-web-blog-0.1.0/webtor-web-blog-0.1.0.tgz
     version: 0.1.0
   webtor-web-ui:
+  - apiVersion: v1
+    appVersion: "1.0"
+    created: "2022-04-16T14:23:10.415236+03:00"
+    description: Webtor Web UI Chart
+    digest: 810ebb057368689b302ba0909b35da40f5255f43d2713aad8fcad490deb1f053
+    name: webtor-web-ui
+    urls:
+    - https://github.com/webtor-io/helm-charts/releases/download/webtor-web-ui-0.1.6/webtor-web-ui-0.1.6.tgz
+    version: 0.1.6
   - apiVersion: v1
     appVersion: "1.0"
     created: "2022-04-16T13:28:12.359081+03:00"
