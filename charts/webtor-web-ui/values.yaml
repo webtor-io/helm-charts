@@ -19,7 +19,7 @@ service:
   topologyKeys: []
 
 ingress:
-  enabled: true
+  enabled: false
   annotations: {}
   paths: ['/']
   hosts: []

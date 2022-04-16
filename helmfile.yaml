@@ -71,7 +71,7 @@ releases:
 - name: web-ui
   namespace: webtor
   chart: webtor/webtor-web-ui
-  version: 0.1.6
+  version: 0.1.7
   values:
     - image:
         tag: d39e565d5041d86639e7da41fc82140d1667b440

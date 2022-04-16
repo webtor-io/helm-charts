@@ -1078,6 +1078,15 @@ entries:
   webtor-web-ui:
   - apiVersion: v1
     appVersion: "1.0"
+    created: "2022-04-16T14:29:37.715964+03:00"
+    description: Webtor Web UI Chart
+    digest: 1c58758ca3ec34f813c4f22e4128f123e17ddee03da54096e72ee5321a2ea50c
+    name: webtor-web-ui
+    urls:
+    - https://github.com/webtor-io/helm-charts/releases/download/webtor-web-ui-0.1.7/webtor-web-ui-0.1.7.tgz
+    version: 0.1.7
+  - apiVersion: v1
+    appVersion: "1.0"
     created: "2022-04-16T14:23:10.415236+03:00"
     description: Webtor Web UI Chart
     digest: 810ebb057368689b302ba0909b35da40f5255f43d2713aad8fcad490deb1f053
