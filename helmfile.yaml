@@ -18,14 +18,16 @@ releases:
   values:
     - image:
         tag: facff27ad4153bcf10ed015666e1f46dfd32ea14
-    - magnet2torrent.yaml
+    - content-prober.yaml
 - name: magnet2torrent
   namespace: webtor
   chart: webtor/magnet2torrent
   version: 0.1.1
+  missingFileHandler: Warn
   values:
     - image:
         tag: bc1a7e4bcbba0cfeeb7f6e38381d7de95a444457
+    - magnet2torrent.yaml
 - name: external-proxy
   namespace: webtor
   chart: webtor/external-proxy
