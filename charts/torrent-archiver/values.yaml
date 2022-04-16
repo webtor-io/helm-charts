@@ -1,5 +1,5 @@
 image:
-  repository: webtor/torrent-archiver
+  repository: ghcr.io/webtor-io/torrent-archiver
   tag: latest
   pullPolicy: IfNotPresent
 
@@ -9,6 +9,7 @@ fullnameOverride: ""
 service:
   type: ClusterIP
   port: 80
+  internalTrafficPolicy: Cluster
   topologyKeys: []
 
 resources: {}

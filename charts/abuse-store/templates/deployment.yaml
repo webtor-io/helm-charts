@@ -23,6 +23,35 @@ spec:
         - name: {{ .Chart.Name }}
           image: "{{ .Values.image.repository }}:{{ .Values.image.tag }}"
           imagePullPolicy: {{ .Values.image.pullPolicy }}
+          env:
+            - name: PG_DATABASE
+              value: "{{ .Values.postgres.name }}"
+            - name: PG_PASSWORD
+              valueFrom:
+                secretKeyRef:
+                  name: "{{ .Values.postgres.name }}.acid-{{ include "abuse-store.fullname" . }}.credentials.postgresql.acid.zalan.do"
+                  key: password
+            - name: PG_USER
+              valueFrom:
+                secretKeyRef:
+                  name: "{{ .Values.postgres.name }}.acid-{{ include "abuse-store.fullname" . }}.credentials.postgresql.acid.zalan.do"
+                  key: username
+            - name: PG_HOST
+              value: "acid-{{ include "abuse-store.fullname" . }}-pooler"
+            - name: PG_PORT
+              value: "5432"
+            - name: PG_SSL
+              value: "true"
+            - name: MAILGUN_KEY
+              value: {{ .Values.mailgun.key }}
+            - name: MAILGUN_DOMAIN
+              value: {{ .Values.mailgun.domain }}
+            - name: MAILGUN_API_BASE
+              value: {{ .Values.mailgun.apiBase }}
+            - name: MAIL_SENDER
+              value: {{ .Values.mail.sender }}
+            - name: MAIL_SUPPORT
+              value: {{ .Values.mail.support }}
           ports:
             - name: grpc
               containerPort: 50051

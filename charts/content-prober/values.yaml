@@ -1,7 +1,7 @@
 replicaCount: 1
 
 image:
-  repository: webtor/content-prober
+  repository: ghcr.io/webtor-io/content-prober
   tag: latest
   pullPolicy: IfNotPresent
 

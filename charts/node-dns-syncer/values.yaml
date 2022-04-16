@@ -1,5 +1,5 @@
 image:
-  repository: webtor/node-dns-syncer
+  repository: ghcr.io/webtor-io/node-dns-syncer
   tag: latest
   pullPolicy: IfNotPresent
 

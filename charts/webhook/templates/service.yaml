@@ -14,6 +14,7 @@ spec:
       targetPort: http
       protocol: TCP
       name: http
+  internalTrafficPolicy: {{ .Values.service.internalTrafficPolicy }}
 {{- if .Values.service.topologyKeys }}
   topologyKeys:
   {{- range .Values.service.topologyKeys }}

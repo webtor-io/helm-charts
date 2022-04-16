@@ -1,7 +1,7 @@
 replicaCount: 1
 
 image:
-  repository: webtor/webtor-web-ui
+  repository: ghcr.io/webtor-io/web-ui
   tag: latest
   pullPolicy: IfNotPresent
 
@@ -15,6 +15,7 @@ config: {}
 service:
   type: ClusterIP
   port: 80
+  internalTrafficPolicy: Cluster
   topologyKeys: []
 
 ingress:

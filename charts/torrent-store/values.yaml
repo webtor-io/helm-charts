@@ -1,7 +1,7 @@
 replicaCount: 1
 
 image:
-  repository: webtor/torrent-store
+  repository: ghcr.io/webtor-io/torrent-store
   tag: latest
   pullPolicy: IfNotPresent
 

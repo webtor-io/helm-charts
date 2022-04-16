@@ -1,7 +1,7 @@
 {{- if .Values.ingressGRPC.enabled -}}
 {{- $fullName := include "torrent-http-proxy.fullname" . -}}
 {{- $ingressPaths := .Values.ingressGRPC.paths -}}
-apiVersion: extensions/v1beta1
+apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
   name: {{ $fullName }}-grpc
@@ -33,9 +33,12 @@ spec:
         paths:
 	{{- range $ingressPaths }}
           - path: {{ . }}
+            pathType: ImplementationSpecific
             backend:
-              serviceName: {{ $fullName }}
-              servicePort: grpc
+              service:
+                name: {{ $fullName }}
+                port: 
+                  name: grpc
 	{{- end }}
   {{- end }}
 {{- end }}

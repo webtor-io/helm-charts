@@ -19,6 +19,7 @@ persistence:
 service:
   type: ClusterIP
   port: 80
+  internalTrafficPolicy: Cluster
   topologyKeys: []
 
 resources: {}

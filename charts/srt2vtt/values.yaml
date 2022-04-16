@@ -1,7 +1,7 @@
 replicaCount: 1
 
 image:
-  repository: webtor/srt2vtt
+  repository: ghcr.io/webtor-io/srt2vtt
   tag: latest
   pullPolicy: IfNotPresent
 
@@ -11,6 +11,7 @@ fullnameOverride: ""
 service:
   type: ClusterIP
   port: 80
+  internalTrafficPolicy: Cluster
   topologyKeys: []
 
 ingress:

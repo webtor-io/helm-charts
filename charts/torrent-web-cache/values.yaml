@@ -1,5 +1,5 @@
 image:
-  repository: webtor/torrent-web-cache
+  repository: ghcr.io/webtor-io/torrent-web-cache
   tag: latest
   pullPolicy: IfNotPresent
 
@@ -30,6 +30,7 @@ aws:
 service:
   type: ClusterIP
   port: 80
+  internalTrafficPolicy: Cluster
   topologyKeys: []
 
 resources: {}

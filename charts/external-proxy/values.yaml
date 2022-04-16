@@ -1,7 +1,7 @@
 replicaCount: 1
 
 image:
-  repository: webtor/external-proxy
+  repository: ghcr.io/webtor-io/external-proxy
   tag: latest
   pullPolicy: IfNotPresent
 

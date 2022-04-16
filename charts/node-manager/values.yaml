@@ -1,5 +1,5 @@
 image:
-  repository: webtor/node-manager
+  repository: ghcr.io/webtor-io/node-manager
   tag: latest
   pullPolicy: IfNotPresent
 

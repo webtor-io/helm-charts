@@ -18,6 +18,7 @@ spec:
       targetPort: grpc
       protocol: TCP
       name: grpc
+  internalTrafficPolicy: {{ .Values.service.internalTrafficPolicy }}
 {{- if .Values.service.topologyKeys }}
   topologyKeys:
   {{- range .Values.service.topologyKeys }}

@@ -1,5 +1,5 @@
 image:
-  repository: webtor/torrent-http-proxy
+  repository: ghcr.io/webtor-io/torrent-http-proxy
   tag: latest
   pullPolicy: IfNotPresent
 
@@ -110,6 +110,7 @@ service:
     http: 80
     httpprom: 8082
     grpc: 50051
+  internalTrafficPolicy: Cluster
   topologyKeys: []
 
 ingress:

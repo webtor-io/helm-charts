@@ -1,7 +1,7 @@
 replicaCount: 1
 
 image:
-  repository: webtor/image-transformer
+  repository: ghcr.io/webtor-io/image-transformer
   tag: latest
   pullPolicy: IfNotPresent
 

@@ -14,16 +14,21 @@ spec:
       targetPort: http
       protocol: TCP
       name: http
+      {{- if contains "NodePort" .Values.service.type -}}
       nodePort: 30180
+      {{- end }}
     - port: {{ .Values.service.ports.grpc }}
       targetPort: grpc
       protocol: TCP
       name: grpc
+      {{- if contains "NodePort" .Values.service.type -}}
       nodePort: 30151
+      {{- end }}
     - port: {{ .Values.service.ports.httpprom }}
       targetPort: httpprom
       protocol: TCP
       name: httpprom
+  internalTrafficPolicy: {{ .Values.service.internalTrafficPolicy }}
 {{- if .Values.service.topologyKeys }}
   topologyKeys:
   {{- range .Values.service.topologyKeys }}

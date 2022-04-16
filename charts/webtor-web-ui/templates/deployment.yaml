@@ -45,10 +45,16 @@ spec:
             httpGet:
               path: /
               port: http
+            initialDelaySeconds: 5
+            periodSeconds: 5
+            failureThreshold: 5
           readinessProbe:
             httpGet:
               path: /
               port: http
+            initialDelaySeconds: 5
+            periodSeconds: 5
+            failureThreshold: 5
           volumeMounts:
             - name: config-volume
               mountPath: /app/config.yaml

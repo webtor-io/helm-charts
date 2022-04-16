@@ -1,7 +1,7 @@
 replicaCount: 1
 
 image:
-  repository: webtor/magnet2torrent
+  repository: ghcr.io/webtor-io/magnet2torrent
   tag: latest
   pullPolicy: IfNotPresent
 

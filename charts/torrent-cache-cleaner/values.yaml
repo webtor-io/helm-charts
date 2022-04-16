@@ -1,5 +1,5 @@
 image:
-  repository: webtor/torrent-cache-cleaner
+  repository: ghcr.io/webtor-io/torrent-cache-cleaner
   tag: latest
   pullPolicy: IfNotPresent
 
@@ -16,8 +16,13 @@ tolerations: []
 affinity: {}
 
 cleaner:
-  doneExpire: 36
-  partialExpire: 12
+  expire:
+    done: 48
+    partial: 24
+    transcoded: 96
+  maxSize: 3T
+  concurrency: 64
+  timeout: 1
 
 aws:
   accessKeyId: ""

@@ -5,7 +5,7 @@
 replicaCount: 1
 
 image:
-  repository: webtor/job-cleaner
+  repository: ghcr.io/webtor-io/job-cleaner
   tag: latest
   pullPolicy: IfNotPresent
 

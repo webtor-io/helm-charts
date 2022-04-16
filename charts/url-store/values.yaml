@@ -21,6 +21,7 @@ service:
   ports: 
     http: 80
     grpc: 50051
+  internalTrafficPolicy: Cluster
   topologyKeys: []
 
 postgres:

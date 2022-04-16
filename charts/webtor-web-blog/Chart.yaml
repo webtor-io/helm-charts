@@ -2,4 +2,4 @@ apiVersion: v1
 appVersion: "1.0"
 description: Webtor Web Blog Chart
 name: webtor-web-blog
-version: 0.1.1
+version: 0.1.2

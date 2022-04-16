@@ -1,7 +1,7 @@
 replicaCount: 1
 
 image:
-  repository: webtor/abuse-store
+  repository: ghcr.io/webtor-io/abuse-store
   tag: latest
   pullPolicy: IfNotPresent
 
@@ -15,3 +15,26 @@ nodeSelector: {}
 tolerations: []
 
 affinity: {}
+
+postgres:
+  instances: 2
+  name: abusestore
+  volume:
+    size: "10Gi"
+  nodeAffinity: {}
+  resources:
+    requests:
+      cpu: 100m
+      memory: 100Mi
+    limits:
+      cpu: 500m
+      memory: 512Mi
+
+mailgun:
+  key: ""
+  domain: webtor.io
+  apiBase: https://api.eu.mailgun.net/v3
+
+mail:
+  sender: noreply@webtor.io
+  support: support@webtor.io

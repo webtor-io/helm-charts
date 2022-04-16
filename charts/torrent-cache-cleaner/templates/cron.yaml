@@ -1,4 +1,4 @@
-apiVersion: batch/v1beta1
+apiVersion: batch/v1
 kind: CronJob
 metadata:
   name: "{{ include "torrent-cache-cleaner.fullname" . }}"
@@ -35,9 +35,17 @@ spec:
               - name: AWS_REGION
                 value: "{{ .Values.aws.region }}"
               - name: DONE_TORRENTS_EXPIRE_HOURS
-                value: "{{ .Values.cleaner.doneExpire }}"
+                value: "{{ .Values.cleaner.expire.done }}"
               - name: PARTIAL_TORRENTS_EXPIRE_HOURS
-                value: "{{ .Values.cleaner.partialExpire }}"
+                value: "{{ .Values.cleaner.expire.partial }}"
+              - name: TRANSCODED_EXPIRE_HOURS
+                value: "{{ .Values.cleaner.expire.transcoded }}"
+              - name: TIMEOUT_HOURS
+                value: "{{ .Values.cleaner.timeout }}"
+              - name: CONCURRENCY
+                value: "{{ .Values.cleaner.concurrency }}"
+              - name: MAX_SIZE
+                value: "{{ .Values.cleaner.maxSize }}"
           restartPolicy: Never
         {{- with .Values.affinity }}
           affinity:

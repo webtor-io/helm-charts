@@ -2,4 +2,4 @@ apiVersion: v1
 appVersion: "1.0"
 description: Torrent Archiver Chart
 name: torrent-archiver
-version: 0.1.2
+version: 0.1.3

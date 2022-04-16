@@ -1,7 +1,7 @@
 replicaCount: 1
 
 image:
-  repository: webtor/dnslb
+  repository: ghcr.io/webtor-io/dnslb
   tag: latest
   pullPolicy: IfNotPresent
 

@@ -1,7 +1,7 @@
 replicaCount: 1
 
 image:
-  repository: webtor/job-pooler
+  repository: ghcr.io/webtor-io/job-pooler
   tag: latest
   pullPolicy: IfNotPresent
 
@@ -21,6 +21,7 @@ service:
   name: job-pooler
   ports: 
     http: 80
+  internalTrafficPolicy: Cluster
   topologyKeys: []
 
 job: {

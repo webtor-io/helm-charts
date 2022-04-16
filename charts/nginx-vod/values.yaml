@@ -1,5 +1,5 @@
 image:
-  repository: webtor/nginx-vod
+  repository: ghcr.io/webtor-io/nginx-vod
   tag: latest
   pullPolicy: IfNotPresent
 
@@ -12,6 +12,7 @@ service:
   type: ClusterIP
   ports: 
     http: 80
+  internalTrafficPolicy: Cluster
   topologyKeys: []
 
 resources: {}

@@ -1,7 +1,7 @@
 replicaCount: 1
 
 image:
-  repository: webtor/video-thumbnails-generator
+  repository: ghcr.io/webtor-io/video-thumbnails-generator
   tag: latest
   pullPolicy: IfNotPresent
 
