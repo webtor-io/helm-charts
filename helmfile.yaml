@@ -13,73 +13,82 @@ releases:
 - name: content-prober
   namespace: webtor
   chart: webtor/content-prober
-  version: 0.1.0
+  version: 0.1.1
   values:
     - image:
-        tag: 0.1.1
+        tag: 54dee8d52c3311a1199054bcd74ea1c02ba35417
 - name: magnet2torrent
   namespace: webtor
   chart: webtor/magnet2torrent
-  version: 0.1.0
+  version: 0.1.1
   values:
     - image:
-        tag: 0.1.0
+        tag: bc1a7e4bcbba0cfeeb7f6e38381d7de95a444457
 - name: external-proxy
   namespace: webtor
   chart: webtor/external-proxy
-  version: 0.1.0
+  version: 0.1.1
   values:
     - image:
-        tag: 0.1.1
+        tag: 30e3733a4ce77a54ae77dc9f73fa8d90fc72db00
 - name: video-info
   namespace: webtor
   chart: webtor/video-info
-  version: 0.1.3
+  version: 0.1.4
   values:
     - image:
-        tag: 0.1.0
+        tag: ea184673c0193a87b32b11c8a68ad90bbddd4778
 - name: torrent-archiver
   namespace: webtor
   chart: webtor/torrent-archiver
-  version: 0.1.2
+  version: 0.1.3
   values:
     - image:
-        tag: 0.1.1
+        tag: 3937bb4ec516fd277b65078de9804e70f97d1a8c
 - name: torrent-store
   namespace: webtor
   chart: webtor/torrent-store
-  version: 0.1.2
+  version: 0.1.3
   values:
     - image:
-        tag: 0.1.2
+        tag: 14c004567eea8675462f65bb4b9e0058b3edfe21
     - redis:
         enabled: true
 - name: srt2vtt
   namespace: webtor
   chart: webtor/srt2vtt
-  version: 0.1.0
+  version: 0.1.1
   values:
     - image:
-        tag: 0.1.1
+        tag: 273965d8b3f54ac5d1490ad99efd2d1c898f6c65
 - name: job-cleaner
   namespace: webtor
   chart: webtor/job-cleaner
-  version: 0.1.2
+  version: 0.1.3
   values:
     - image:
-        tag: 0.1.0
+        tag: f91ef1cde4d60f8bea3d0c805d8adbce1d21a99a
+- name: web-ui
+  namespace: webtor
+  chart: webtor/webtor-web-ui
+  version: 0.1.5
+  values:
+    - image:
+        tag: d39e565d5041d86639e7da41fc82140d1667b440
+    - service:
+        type: NodePort
 - name: torrent-http-proxy
   namespace: webtor
   chart: webtor/torrent-http-proxy
-  version: 0.1.23
+  version: 0.1.24
   missingFileHandler: Warn
   values:
     - clients.yaml
     - seeder:
-        image: webtor/torrent-web-seeder:0.1.2
+        image: ghcr.io/webtor-io/torrent-web-seeder:aafcfb56ec36fa16e740720f4a937991a7c5da3b
     - transcoder:
-        image: webtor/content-transcoder:0.1.2
+        image: ghcr.io/webtor-io/content-transcoder:f802e32f814558f78c270ba72fb674e4ae60b68a
     - service:
         type: NodePort
     - image:
-        tag: 0.1.2
+        tag: 1b700365943408330bc1a0ef86e07fb57950cbff

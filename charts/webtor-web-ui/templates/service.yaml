@@ -14,6 +14,9 @@ spec:
       targetPort: http
       protocol: TCP
       name: http
+      {{- if contains "NodePort" .Values.service.type -}}
+      nodePort: 30080
+      {{- end }}
   internalTrafficPolicy: {{ .Values.service.internalTrafficPolicy }}
 {{- if .Values.service.topologyKeys }}
   topologyKeys:
