@@ -1,6 +1,6 @@
 sudo apt update
 sudo apt-get -y install snapd git curl
-sudo snap install microk8s --classic --channel=1.19/stable
+sudo snap install microk8s --classic --channel=1.22/stable
 sudo microk8s status --wait-ready
 sudo microk8s kubectl get nodes
 sudo microk8s enable dns
