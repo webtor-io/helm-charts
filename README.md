@@ -12,10 +12,14 @@ RAM: 4GB
 curl https://raw.githubusercontent.com/webtor-io/helm-charts/master/scripts/get-webtor.sh | sh
 ```
 
-This will install single-node microk8s cluster and setup webtor on it, at the end of installation you will
-get values of listening GRPC and HTTP ports. All operations can take a long time.
+This will install single-node microk8s cluster and setup webtor on it (api + web-ui).
 
-This was tested at Ubuntu 20.04.
+### Ports
+* 30080 - Web UI
+* 30180 - API
+* 30151 - GRPC
+
+This was tested on Ubuntu 20.04.
 
 To update webtor components to the latest stable versions just use the following script:
 ```
@@ -112,6 +116,14 @@ For update do next three things:
  helm repo update
  helmfile apply
  ```
+## Adjusting components
+
+Every component can be configured separately by providing your own configuration file.
+For example if you wish to reconfigure `web-ui` you have to do the following: 
+1. Add `web-ui.yaml` file to the same folder where your `helmfile.yaml` located
+2. Adjust configuration in `web-ui.yaml`
+3. `helmfile apply`
+
 ## Secure your API
 
 Just put additional file called `clients.yaml` in the same directory where your `helmfile.yaml` located with the following content:
@@ -127,7 +139,7 @@ clients:
 
 Also make sure that you have the latest version of `helmfile.yaml`.
 
-And do `sudo helmfile --helm-binary=microk8s.helm apply` to apply changes.
+And do `helmfile apply` to apply changes.
 
 After this, all requests to the API will require auth-token. It is simple [JWT-token](https://jwt.io/).
 Also it is possible to pass additional params in token payload such as:
