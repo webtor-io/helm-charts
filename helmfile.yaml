@@ -16,7 +16,7 @@ releases:
   version: 0.1.1
   values:
     - image:
-        tag: 54dee8d52c3311a1199054bcd74ea1c02ba35417
+        tag: facff27ad4153bcf10ed015666e1f46dfd32ea14
 - name: magnet2torrent
   namespace: webtor
   chart: webtor/magnet2torrent
