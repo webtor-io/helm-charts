@@ -91,7 +91,7 @@ releases:
   missingFileHandler: Warn
   values:
     - image:
-        tag: b4d26130522d594175c8fb59a24277824d44e045
+        tag: edd9147769df40b33ec241594b00371cdf04a554
     - service:
         type: NodePort
     - web-ui.yaml
@@ -108,6 +108,6 @@ releases:
     - service:
         type: NodePort
     - image:
-        tag: 1b700365943408330bc1a0ef86e07fb57950cbff
+        tag: 9daeeb830f0944ead091ba0307bbacbc888e26ca
     - clients.yaml
     - torrent-http-proxy.yaml
