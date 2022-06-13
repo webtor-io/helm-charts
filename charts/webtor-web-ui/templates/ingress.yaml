@@ -1,13 +1,13 @@
 {{- if .Values.ingress.enabled -}}
-{{- $fullName := include "webtor-web-ui.fullname" . -}}
+{{- $fullName := include "web-ui.fullname" . -}}
 {{- $ingressPaths := .Values.ingress.paths -}}
 apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
   name: {{ $fullName }}
   labels:
-    app.kubernetes.io/name: {{ include "webtor-web-ui.name" . }}
-    helm.sh/chart: {{ include "webtor-web-ui.chart" . }}
+    app.kubernetes.io/name: {{ include "web-ui.name" . }}
+    helm.sh/chart: {{ include "web-ui.chart" . }}
     app.kubernetes.io/instance: {{ .Release.Name }}
     app.kubernetes.io/managed-by: {{ .Release.Service }}
   {{- with .Values.ingress.annotations }}

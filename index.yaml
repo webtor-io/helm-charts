@@ -1028,6 +1028,16 @@ entries:
     urls:
     - https://github.com/webtor-io/helm-charts/releases/download/video-thumbnails-generator-0.1.0/video-thumbnails-generator-0.1.0.tgz
     version: 0.1.0
+  web-ui:
+  - apiVersion: v1
+    appVersion: "1.0"
+    created: "2022-06-13T14:17:02.376156+03:00"
+    description: Webtor Web UI Chart
+    digest: d0d0bd413b5561b28f310b5db01f58947e2d513398d729d6803a741563324c93
+    name: web-ui
+    urls:
+    - https://github.com/webtor-io/helm-charts/releases/download/web-ui-0.1.8/web-ui-0.1.8.tgz
+    version: 0.1.8
   webhook:
   - apiVersion: v1
     appVersion: "1.0"

@@ -91,8 +91,8 @@ releases:
     - job-cleaner.yaml
 - name: web-ui
   namespace: webtor
-  chart: webtor/webtor-web-ui
-  version: 0.1.7
+  chart: webtor/web-ui
+  version: 0.1.8
   missingFileHandler: Warn
   values:
     - image:

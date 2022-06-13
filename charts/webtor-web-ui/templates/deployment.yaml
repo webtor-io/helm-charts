@@ -1,10 +1,10 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: {{ include "webtor-web-ui.fullname" . }}
+  name: {{ include "web-ui.fullname" . }}
   labels:
-    app.kubernetes.io/name: {{ include "webtor-web-ui.name" . }}
-    helm.sh/chart: {{ include "webtor-web-ui.chart" . }}
+    app.kubernetes.io/name: {{ include "web-ui.name" . }}
+    helm.sh/chart: {{ include "web-ui.chart" . }}
     app.kubernetes.io/instance: {{ .Release.Name }}
     app.kubernetes.io/managed-by: {{ .Release.Service }}
     linkerd.io/auto-inject: disabled
@@ -12,20 +12,20 @@ spec:
   replicas: {{ .Values.replicaCount }}
   selector:
     matchLabels:
-      app.kubernetes.io/name: {{ include "webtor-web-ui.name" . }}
+      app.kubernetes.io/name: {{ include "web-ui.name" . }}
       app.kubernetes.io/instance: {{ .Release.Name }}
   template:
     metadata:
       annotations:
         checksum/config: {{ include (print $.Template.BasePath "/configmap.yaml") . | sha256sum }}
       labels:
-        app.kubernetes.io/name: {{ include "webtor-web-ui.name" . }}
+        app.kubernetes.io/name: {{ include "web-ui.name" . }}
         app.kubernetes.io/instance: {{ .Release.Name }}
     spec:
       volumes:
         - name: config-volume
           configMap:
-            name: {{ include "webtor-web-ui.fullname" . }}
+            name: {{ include "web-ui.fullname" . }}
       containers:
         - name: {{ .Chart.Name }}
           image: "{{ .Values.image.repository }}:{{ .Values.image.tag }}"
