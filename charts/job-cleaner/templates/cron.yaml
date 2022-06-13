@@ -9,7 +9,7 @@ metadata:
     app.kubernetes.io/managed-by: {{ .Release.Service }}
 spec:
   schedule: "{{ .Values.schedule }}"
-  concurrencyPolicy: Forbid
+  concurrencyPolicy: Allow
   startingDeadlineSeconds: 10
   jobTemplate:
     spec:

@@ -1,8 +1,13 @@
+repositories:
+- name: bitnami
+  url: https://charts.bitnami.com/bitnami
+- name: webtor
+  url: https://charts.webtor.io
+
 releases:
 - name: redis
   namespace: webtor
   chart: bitnami/redis
-  version: 9.5.0
   values:
     - usePassword: false
     - cluster:

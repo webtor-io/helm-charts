@@ -86,7 +86,7 @@ spec:
               value: "{{ .Values.transcoder.nodeAffinity.key }}"
             - name: TRANSCODER_AFFINITY_VALUE
               value: "{{ .Values.transcoder.nodeAffinity.value }}"
-            - name: TRANSCDOER_REQUEST_AFFINITY
+            - name: TRANSCODER_REQUEST_AFFINITY
               value: "{{ .Values.transcoder.requestAffinity }}"
             - name: MB_TRANSCODER_AFFINITY_KEY
               value: "{{ .Values.mbTranscoder.nodeAffinity.key }}"
