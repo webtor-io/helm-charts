@@ -10,7 +10,8 @@ releases:
   chart: bitnami/redis
   values:
     - usePassword: false
-    - cluster:
+    - architecture: standalone
+    - auth:
         enabled: false
     - master:
         persistence:
