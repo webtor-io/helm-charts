@@ -28,6 +28,8 @@ spec:
                 value: "{{ .Values.cloudflare.zones }}"
               - name: K8S_LABEL_SELECTOR
                 value: "{{ .Values.nodes.labelSelector }}"
+              - name: K8S_LABEL_NAME
+                value: "{{ .Values.nodes.labelName }}"
               - name: K8S_ADDRESS_TYPE
                 value: "{{ .Values.nodes.addressType }}"
               - name: DOMAIN_NAME_PREFIX

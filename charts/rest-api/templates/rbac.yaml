@@ -3,29 +3,29 @@ kind: ClusterRole
 apiVersion: rbac.authorization.k8s.io/v1
 metadata:
   labels:
-    app: {{ template "node-dns-syncer.name" . }}
+    app: {{ template "rest-api.name" . }}
     chart: {{ .Chart.Name }}-{{ .Chart.Version }}
     heritage: {{ .Release.Service }}
     release: {{ .Release.Name }}
-  name: {{ template "node-dns-syncer.fullname" . }}
+  name: {{ template "rest-api.fullname" . }}
 rules:
 - apiGroups: [""]
   resources: ["nodes"]
-  verbs: ["list", "get", "update"]
+  verbs: ["list"]
 ---
 apiVersion: rbac.authorization.k8s.io/v1
 kind: ClusterRoleBinding
 metadata:
   labels:
-    app: {{ template "node-dns-syncer.name" . }}
+    app: {{ template "rest-api.name" . }}
     chart: {{ .Chart.Name }}-{{ .Chart.Version }}
     heritage: {{ .Release.Service }}
     release: {{ .Release.Name }}
-  name: {{ template "node-dns-syncer.fullname" . }}
+  name: {{ template "rest-api.fullname" . }}
 roleRef:
   apiGroup: rbac.authorization.k8s.io
   kind: ClusterRole
-  name: {{ template "node-dns-syncer.fullname" . }}
+  name: {{ template "rest-api.fullname" . }}
 subjects:
   - kind: ServiceAccount
     name: default

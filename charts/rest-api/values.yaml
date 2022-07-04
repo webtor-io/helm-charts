@@ -1,0 +1,40 @@
+image:
+  repository: ghcr.io/webtor-io/rest-api
+  tag: latest
+  pullPolicy: IfNotPresent
+
+nameOverride: ""
+fullnameOverride: ""
+
+secret: ""
+
+prometheus:
+  address: ""
+
+export:
+  ssl: false
+  domain: ""
+
+node:
+  label:
+    prefix: "webtor.io/"
+  network:
+    iface: "eth0"
+
+rbac:
+  create: true
+
+service:
+  type: ClusterIP
+  ports: 
+    http: 80
+  internalTrafficPolicy: Cluster
+  topologyKeys: []
+
+resources: {}
+
+nodeSelector: {}
+
+tolerations: []
+
+affinity: {}

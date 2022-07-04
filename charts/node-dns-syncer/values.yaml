@@ -29,4 +29,5 @@ domainName:
 
 nodes:
   labelSelector: ""
+  labelName: ""
   addressType: "ExternalIP"

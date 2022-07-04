@@ -334,6 +334,15 @@ entries:
   node-dns-syncer:
   - apiVersion: v1
     appVersion: "1.0"
+    created: "2022-07-04T20:56:09.916693+03:00"
+    description: A Helm chart for Node DNS Syncer
+    digest: 7c2b2b0c6c569b4c6ab7c2179109c3b25f4fa523bc97484869f6a2e911c459d8
+    name: node-dns-syncer
+    urls:
+    - https://github.com/webtor-io/helm-charts/releases/download/node-dns-syncer-0.1.4/node-dns-syncer-0.1.4.tgz
+    version: 0.1.4
+  - apiVersion: v1
+    appVersion: "1.0"
     created: "2022-04-16T13:14:15.51519+03:00"
     description: A Helm chart for Node DNS Syncer
     digest: c7e979eadae0f0c0820ac40b6375f36f7de60c250097d517fa04c194b89f4a37
@@ -386,6 +395,16 @@ entries:
     name: node-manager
     urls:
     - https://github.com/webtor-io/helm-charts/releases/download/node-manager-0.1.0/node-manager-0.1.0.tgz
+    version: 0.1.0
+  rest-api:
+  - apiVersion: v1
+    appVersion: "1.0"
+    created: "2022-07-04T20:56:10.508577+03:00"
+    description: REST-API for Webtor Chart
+    digest: df17ae93a453b40e674733b7a82068ad73e116ce82cfae3825dcf2b7ee8945cb
+    name: rest-api
+    urls:
+    - https://github.com/webtor-io/helm-charts/releases/download/rest-api-0.1.0/rest-api-0.1.0.tgz
     version: 0.1.0
   retry-proxy:
   - apiVersion: v1
