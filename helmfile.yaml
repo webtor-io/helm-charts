@@ -90,6 +90,15 @@ releases:
     - image:
         tag: f91ef1cde4d60f8bea3d0c805d8adbce1d21a99a
     - job-cleaner.yaml
+- name: rest-api
+  namespace: webtor
+  chart: webtor/rest-api
+  version: 0.1.0
+  missingFileHandler: Warn
+  values:
+    - image:
+        tag: eddd5cc435ef9488479761c5185fb8669796a991
+    - rest-api.yaml
 - name: web-ui
   namespace: webtor
   chart: webtor/web-ui
@@ -108,12 +117,12 @@ releases:
   missingFileHandler: Warn
   values:
     - seeder:
-        image: ghcr.io/webtor-io/torrent-web-seeder:aafcfb56ec36fa16e740720f4a937991a7c5da3b
+        image: ghcr.io/webtor-io/torrent-web-seeder:47c5a149a7c748f82b72f2c8d72d77449b92eb91
     - transcoder:
-        image: ghcr.io/webtor-io/content-transcoder:f802e32f814558f78c270ba72fb674e4ae60b68a
+        image: ghcr.io/webtor-io/content-transcoder:6beafbee8cefdfc80c076055ae33155a9a9bcea6
     - service:
         type: NodePort
     - image:
-        tag: 9daeeb830f0944ead091ba0307bbacbc888e26ca
+        tag: 22b20348a03eaea4b7a573804f97ab7fa7dbafd6
     - clients.yaml
     - torrent-http-proxy.yaml
