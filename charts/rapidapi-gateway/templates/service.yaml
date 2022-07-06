@@ -1,0 +1,26 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: {{ include "rapidapi-gateway.fullname" . }}
+  labels:
+    app.kubernetes.io/name: {{ include "rapidapi-gateway.name" . }}
+    helm.sh/chart: {{ include "rapidapi-gateway.chart" . }}
+    app.kubernetes.io/instance: {{ .Release.Name }}
+    app.kubernetes.io/managed-by: {{ .Release.Service }}
+spec:
+  type: {{ .Values.service.type }}
+  ports:
+    - port: {{ .Values.service.ports.http }}
+      targetPort: http
+      protocol: TCP
+      name: http
+  internalTrafficPolicy: {{ .Values.service.internalTrafficPolicy }}
+{{- if .Values.service.topologyKeys }}
+  topologyKeys:
+  {{- range .Values.service.topologyKeys }}
+    - {{ . | quote }}
+  {{- end }}
+{{- end }}
+  selector:
+    app.kubernetes.io/name: {{ include "rapidapi-gateway.name" . }}
+    app.kubernetes.io/instance: {{ .Release.Name }}

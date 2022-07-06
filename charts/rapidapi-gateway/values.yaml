@@ -1,0 +1,54 @@
+image:
+  repository: ghcr.io/webtor-io/rapidapi-gateway
+  tag: latest
+  pullPolicy: IfNotPresent
+
+nameOverride: ""
+fullnameOverride: ""
+
+secret: ""
+
+service:
+  type: ClusterIP
+  ports: 
+    http: 80
+  internalTrafficPolicy: Cluster
+  topologyKeys: []
+
+ingress:
+  enabled: true
+  annotations: {}
+  paths: ['/']
+  hosts: []
+  tls: []
+
+features:
+  basic:
+    rate: '20M'
+    connections: 2
+  pro:
+    rate: '100M'
+    connections: 10
+  ultra:
+    rate: '250M'
+    connections: 25
+  mega:
+    rate: '100M'
+    connections: 100
+
+rapidApi:
+  proxy:
+    secret: ''
+
+webtor:
+  api:
+    key: ''
+    secret: ''
+
+resources: {}
+
+nodeSelector: {}
+
+tolerations: []
+
+affinity: {}

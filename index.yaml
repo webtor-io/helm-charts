@@ -396,6 +396,25 @@ entries:
     urls:
     - https://github.com/webtor-io/helm-charts/releases/download/node-manager-0.1.0/node-manager-0.1.0.tgz
     version: 0.1.0
+  rapidapi-gateway:
+  - apiVersion: v1
+    appVersion: "1.0"
+    created: "2022-07-06T22:22:43.376476+03:00"
+    description: RapidAPI Gateway for REST-API Chart
+    digest: c4a2529cdc2349288ae0467b70e0509baa02a4e5157cebb3db52b8306a782d91
+    name: rapidapi-gateway
+    urls:
+    - https://github.com/webtor-io/helm-charts/releases/download/rapidapi-gateway-0.1.1/rapidapi-gateway-0.1.1.tgz
+    version: 0.1.1
+  - apiVersion: v1
+    appVersion: "1.0"
+    created: "2022-07-06T22:05:43.198132+03:00"
+    description: RapidAPI Gateway for REST-API Chart
+    digest: 64d1104833e0bd730080d131fb5c0b1c5202110433dd28b572d2fe08156fc7c8
+    name: rapidapi-gateway
+    urls:
+    - https://github.com/webtor-io/helm-charts/releases/download/rapidapi-gateway-0.1.0/rapidapi-gateway-0.1.0.tgz
+    version: 0.1.0
   rest-api:
   - apiVersion: v1
     appVersion: "1.0"
