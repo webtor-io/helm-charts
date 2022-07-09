@@ -106,7 +106,7 @@ releases:
   missingFileHandler: Warn
   values:
     - image:
-        tag: edd9147769df40b33ec241594b00371cdf04a554
+        tag: df7766b05ae76504e796c5c528b0471ca321806c
     - service:
         type: NodePort
     - web-ui.yaml
@@ -119,7 +119,7 @@ releases:
     - seeder:
         image: ghcr.io/webtor-io/torrent-web-seeder:47c5a149a7c748f82b72f2c8d72d77449b92eb91
     - transcoder:
-        image: ghcr.io/webtor-io/content-transcoder:6beafbee8cefdfc80c076055ae33155a9a9bcea6
+        image: ghcr.io/webtor-io/content-transcoder:269a3ce8dac14dab3033509ad31004f7759be7a2
     - service:
         type: NodePort
     - image:
