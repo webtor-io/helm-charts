@@ -97,7 +97,7 @@ releases:
   missingFileHandler: Warn
   values:
     - image:
-        tag: eddd5cc435ef9488479761c5185fb8669796a991
+        tag: fa1f1e4d4334d8421653f5f724f60691dcc27c16
     - rest-api.yaml
 - name: web-ui
   namespace: webtor
