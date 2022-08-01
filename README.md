@@ -14,12 +14,18 @@ curl https://raw.githubusercontent.com/webtor-io/helm-charts/master/scripts/get-
 
 This will install single-node microk8s cluster and setup webtor on it (api + web-ui).
 
+This was tested on Ubuntu 20.04.
+
 ### Ports
 * 30080 - Web UI
 * 30180 - API
 * 30151 - GRPC
 
-This was tested on Ubuntu 20.04.
+### Swagger
+
+http://{YOUR_SERVER_IP}:30180/rest/swagger/index.html
+
+### Update
 
 To update webtor components to the latest stable versions just use the following script:
 ```
